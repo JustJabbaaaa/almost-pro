@@ -9,7 +9,7 @@
   <div class="app home">
     <Navbar />
     <Header />
-    <Section anchor="About" title="About us" subtitle="The power of Vue Components" grid="2">
+    <Section anchor="About" title="O nas" subtitle="Blablabla" grid="2">
       <div class="about__content">
         <h3>{{ about.title }}</h3>
         <p>{{ about.description }}</p>
@@ -18,16 +18,13 @@
         <NuxtImg src="/images/about/about_image.webp" alt="Section Image" height="800" width="800" loading="lazy" />
       </div>
     </Section>
-    <Section anchor="Services" title="Services" subtitle="Compose with everything you need." grid="4">
-      <div v-for="item in services" :key="item.title" class="services__card">
-        <div class="services__card--icon">
-          <mdicon :name="item.icon" :width="25" :height="25" />
+    <Section anchor="Teams" title="Drużyny" subtitle="Poznaj nasze drużyny" grid="4">
+      <div v-for="item in pierwsza" :key="item.title" class="teams__card">
+        <div class="teams__card--icon">
+          <NuxtImg :alt="`Logo drużyny ${item.team}`" :src="`/images/teams/${item.shortcut}.png`"/>
         </div>
-        <div class="services__card--title">
-          <p>{{ item.title }}</p>
-        </div>
-        <div class="services__card--description">
-          <p>{{ item.description }}</p>
+        <div class="teams__card--name">
+          <p>{{ item.team }}</p>
         </div>
       </div>
     </Section>
@@ -55,51 +52,233 @@
     data() {
       return {
         about: {
-          title: 'About Nuxt.js 3',
-          description: 'Nuxt.js 3 is a powerful framework for creating Vue.js applications with server-side rendering, static site generation, and more. It provides an intuitive and flexible development experience, allowing you to build modern web applications with ease. With features such as improved performance, enhanced TypeScript support, and a streamlined development workflow, Nuxt.js 3 empowers developers to create responsive, fast, and modern web experiences.',
+          title: 'O nas',
+          description: 'blabla',
         },
-        services: [
-          {
-            icon: 'Routes',
-            title: 'Routing & Layouts',
-            description: 'File based routing system to build complex views and interfaces with a powerful and conventional approach.',
-          },
-          {
-            icon: 'Connection',
-            title: 'Data Fetching',
-            description: 'Composables that run on the server to fetch data for your components and enable you to render content in different ways.',
-          },
-          {
-            icon: 'ImageArea',
-            title: 'Assets & Style',
-            description: 'Image, Font and Script optimizations with a built-in support for CSS Modules, Sass, PostCSS, CSS-in-JS and more.',
-          },
-          {
-            icon: 'Trophy',
-            title: 'SEO & Meta Tags',
-            description: 'Production ready and indexable by search engines while giving the feeling of an app to the end-users.',
-          },
-          {
-            icon: 'Security',
-            title: 'Middleware',
-            description: 'Run custom code such as authentication, localization or A/B testing before rendering a page or a group of pages.',
-          },
-          {
-            icon: 'Database',
-            title: 'State Management',
-            description: 'Nuxt provides a simple way to share a reactive and SSR-friendly state between components.',
-          },
-          {
-            icon: 'TransitionMasked',
-            title: 'Transitions',
-            description: 'Create smooth transitions between layouts, pages and components with a built-in support for Vue & browser transitions.',
-          },
-          {
-            icon: 'bug',
-            title: 'Error Handling',
-            description: 'Built-in error handling and logging to help you debug your application and provide a better user experience.',
-          },
-        ],
+        pierwsza: [
+        {
+          team: 'BEIFENG ESPORTS',
+          shortcut: 'BE',
+          wins: 5,
+          loses: 3,
+          top: 'Grundi',
+          jg: 'Lissek',
+          mid: 'px3ke',
+          adc: 'ek1pa',
+          sup: 'dawid',
+          opgg: ''
+        },
+        {
+          team: 'BLOODY WOUNDS',
+          shortcut: 'BW',
+          wins: 5,
+          loses: 3,
+          top: 'Grundi',
+          jg: 'Lissek',
+          mid: 'px3ke',
+          adc: 'ek1pa',
+          sup: 'dawid',
+          opgg: ''
+        },
+        {
+          team: 'Chaos Banes',
+          shortcut: 'CB',
+          wins: 5,
+          loses: 3,
+          top: 'Grundi',
+          jg: 'Lissek',
+          mid: 'px3ke',
+          adc: 'ek1pa',
+          sup: 'dawid',
+          opgg: ''
+        },
+        {
+          team: 'Chaos Harbringers',
+          shortcut: 'CE',
+          wins: 5,
+          loses: 3,
+          top: 'Grundi',
+          jg: 'Lissek',
+          mid: 'px3ke',
+          adc: 'ek1pa',
+          sup: 'dawid',
+          opgg: ''
+        },
+        {
+          team: 'Gejmingowi Emeryci',
+          shortcut: 'GEJ',
+          wins: 5,
+          loses: 3,
+          top: 'Grundi',
+          jg: 'Lissek',
+          mid: 'px3ke',
+          adc: 'ek1pa',
+          sup: 'dawid',
+          opgg: ''
+        },
+        {
+          team: 'No.7',
+          shortcut: 'N7',
+          wins: 5,
+          loses: 3,
+          top: 'Grundi',
+          jg: 'Lissek',
+          mid: 'px3ke',
+          adc: 'ek1pa',
+          sup: 'dawid',
+          opgg: ''
+        },
+        {
+          team: 'Chaos Oni',
+          shortcut: 'ONI',
+          wins: 6,
+          loses: 3,
+          top: 'Grundi',
+          jg: 'Lissek',
+          mid: 'px3ke',
+          adc: 'ek1pa',
+          sup: 'dawid',
+          opgg: ''
+        },
+        {
+          team: 'Reve Esports',
+          shortcut: 'REV',
+          wins: 8,
+          loses: 3,
+          top: 'elobenc',
+          jg: 'Lissek',
+          mid: 'px3ke',
+          adc: 'ek1pa',
+          sup: 'dawid',
+          opgg: ''
+        },
+        {
+          team: 'Tuesday Slots',
+          captain: 'px3ke',
+          captainDC: 'px3ke#1234',
+          shortcut: 'TS',
+          wins: 13,
+          loses: 21,
+          top: 'Grundi',
+          jg: 'Lissek',
+          mid: 'px3ke',
+          adc: 'ek1pa',
+          sup: 'dawid',
+          opgg: 'https://www.op.gg/summoners/euw/Adison-2137'
+        },
+      ].sort((a, b) => b.wins - a.wins),
+      druga: [
+        {
+          team: 'BEIFENG ESPORTS',
+          shortcut: 'BE',
+          wins: 21,
+          loses: 13,
+          top: 'Grundi',
+          jg: 'Lissek',
+          mid: 'px3ke',
+          adc: 'ek1pa',
+          sup: 'dawid',
+          opgg: ''
+        },
+        {
+          team: 'BLOODY WOUNDS',
+          shortcut: 'BW',
+          wins: 5,
+          loses: 3,
+          top: 'Grundi',
+          jg: 'Lissek',
+          mid: 'px3ke',
+          adc: 'ek1pa',
+          sup: 'dawid',
+          opgg: ''
+        },
+        {
+          team: 'Chaos Banes',
+          shortcut: 'CB',
+          wins: 5,
+          loses: 3,
+          top: 'Grundi',
+          jg: 'Lissek',
+          mid: 'px3ke',
+          adc: 'ek1pa',
+          sup: 'dawid',
+          opgg: ''
+        },
+        {
+          team: 'Chaos Harbringers',
+          shortcut: 'CE',
+          wins: 5,
+          loses: 3,
+          top: 'Grundi',
+          jg: 'Lissek',
+          mid: 'px3ke',
+          adc: 'ek1pa',
+          sup: 'dawid',
+          opgg: ''
+        },
+        {
+          team: 'Gejmingowi Emeryci',
+          shortcut: 'GEJ',
+          wins: 5,
+          loses: 3,
+          top: 'Grundi',
+          jg: 'Lissek',
+          mid: 'px3ke',
+          adc: 'ek1pa',
+          sup: 'dawid',
+          opgg: ''
+        },
+        {
+          team: 'No.7',
+          shortcut: 'N7',
+          wins: 5,
+          loses: 3,
+          top: 'Grundi',
+          jg: 'Lissek',
+          mid: 'px3ke',
+          adc: 'ek1pa',
+          sup: 'dawid',
+          opgg: ''
+        },
+        {
+          team: 'Chaos Oni',
+          shortcut: 'ONI',
+          wins: 6,
+          loses: 3,
+          top: 'Grundi',
+          jg: 'Lissek',
+          mid: 'px3ke',
+          adc: 'ek1pa',
+          sup: 'dawid',
+          opgg: ''
+        },
+        {
+          team: 'Reve Esports',
+          shortcut: 'REV',
+          wins: 8,
+          loses: 3,
+          top: 'Grundi',
+          jg: 'Lissek',
+          mid: 'px3ke',
+          adc: 'ek1pa',
+          sup: 'dawid',
+          opgg: ''
+        },
+        {
+          team: 'Tuesday Slots',
+          captain: 'px3ke',
+          captainDC: 'px3ke#1234',
+          shortcut: 'TS',
+          wins: 13,
+          loses: 21,
+          top: 'Grundi',
+          jg: 'Lissek',
+          mid: 'px3ke',
+          adc: 'ek1pa',
+          sup: 'dawid',
+          opgg: ''
+        },
+      ].sort((a, b) => b.wins - a.wins),
         contact: {
           title: 'Get in touch with us to create lightning-fast websites.',
           description: 'Our team specializes in creating lightning-fast websites that deliver exceptional user experiences. We are dedicated to building web solutions optimized for speed and reliability. Contact us today to discuss how we can help you achieve your website performance goals.',

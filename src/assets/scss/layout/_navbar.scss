@@ -1,17 +1,19 @@
 #Navbar.active {
   .nav {
-    background: rgba($white-color, .75);
+    background: rgba($primary-color, .3);
     backdrop-filter: blur(5px);
     box-shadow: 0 0 35px -5px rgba($secondary-dark, .5);
   }
 }
 .nav {
   position: fixed;
+  background-color: $secondary-color;
+  color:  $primary-color;
   top: 0;
   left: 0;
   right: 0;
   z-index: 1030;
-  padding: 2rem 0;
+  padding: .5rem 0;
   transition: .3s all ease-in-out;
 
   & .container {
@@ -81,7 +83,7 @@
     }
   }
   &__brand img {
-    max-height: 40px;
+    max-height:40px;
   }
   &__collapse {
     display: flex;

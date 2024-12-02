@@ -2,9 +2,8 @@
   <Section anchor="Header">
     <div class="header__content">
       <div class="header__description">
-        <span class="header__description--subtitle">Build amazing web experiences</span>
-        <h1 class="header__description--title">ALMOST PRO</h1>
-        <p class="header__description--text">Experience the power of Nuxt.js with this responsive, fast, and modern starter project.</p>
+        <h1 class="header__description--title">almost pro</h1>
+        <p class="header__description--text">semi-pro e-sport league</p>
       </div>
       <div class="header__buttons">
         <NuxtLink to="https://github.com/nuxt/nuxt" class="btn btn-primary" target="_blank">NuxtJs</NuxtLink>
