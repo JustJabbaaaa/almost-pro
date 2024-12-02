@@ -33,6 +33,12 @@
   font-weight: 700;
   src: url('/assets/fonts/athiti-v12-latin-ext-700.woff2') format('woff2');
 }
+@font-face {
+  font-display: swap;
+  font-family: 'Anek Latin';
+  font-style: normal;
+  src: url('assets/fonts/AnekLatin-VariableFont_wdth,wght.ttf') format('truetype');
+}
 
 h1 { font-size: clamp(2.15rem, 3.0000vw + 1.1750rem, 4.5rem); }
 h2 { font-size: clamp(1.55rem, 2.0000vw + 1.1750rem, 2.85rem); }
