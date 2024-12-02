@@ -8,17 +8,26 @@
     gap: 1.5rem;
     z-index: 2;
   }
+  
   .teams__card {
+    transition: all .2s ease-in-out;
+    background-color: rgba($secondary-light, .2);
+  color:$primary-color;
+  cursor:pointer;
+  height:100%;
   display:flex;
   flex-direction: column;
   align-items: center;
-  border: 1px solid $secondary-color;
+  border: 1px solid $primary-dark;
   border-radius: 1rem;
-  padding: 1rem;
-  box-shadow: 0 0 35px -5px rgba($primary-color, .2);
+  box-shadow: 0 0 35px -7px rgba($primary-color, .2);
+    .hidden {
+      display:none;
+    }
   
   &:hover{
     border: 1px solid $primary-color;
+    box-shadow: 0 0 40px -5px rgba($primary-color, .4);
   }
   &--name{
     text-align:center;
@@ -32,5 +41,50 @@
       height:200px;
     }
   }
+  &--back{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    font-size:1.5rem;
+    padding:1rem;
+  }
+  &--top{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    img{
+      height: 2rem;
+    }
+  }
+  &--lane{
+    display:grid;
+    align-items: center;
+    grid-template-columns: repeat(2, 1fr);
+    img{
+      height:20px;
+    }
+  }
+  }
+}
+.chooseLeague{
+  padding:0px;
+  &__buttons{
+      display:flex;
+      justify-content: center;
+      text-transform: uppercase;
+      button{
+          margin:0 .5rem;
+          cursor:pointer;
+          background-color: $secondary-color;
+          border:1px solid $primary-color;
+          border-radius:2rem;
+          padding:.7rem;
+      }
+      :hover, .active{
+          background-color: $primary-color;
+          color:$secondary-color;
+      }
   }
 }
