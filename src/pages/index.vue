@@ -116,19 +116,17 @@
         
       </div>
     </Section>
-    <Section anchor="Contact" title="Kontakt" grid="1">
+    <Section anchor="Contact" grid="1">
       <div class="contact__content">
         <div class="contact__content--title">
           <h3>Skontaktuj się z nami</h3>
-          <font-awesome-icon :icon="['fab', 'x-twitter']" />
         </div>
-        <!-- <div class="contact__content--description">
-          <p>{{ contact.description }}</p>
-        </div> -->
-        <div class="contact__content--buttons" v-for="item in contact" :key="item.title">
-          <NuxtLink :to="`${item.link}`" target="_blank">
-            <NuxtImg :alt="`Logo ${item.socialmedia}`" :src="`/images/contact/${item.socialmedia}.svg`"/>
-          </NuxtLink>
+        <div class="contact__content--buttons" >
+          <div v-for="item in contact" :key="item.title">
+            <NuxtLink :to="`${item.link}`" target="_blank">
+              <Icon :name="`fa6-brands:${item.socialmedia}`" />
+            </NuxtLink>
+          </div>
         </div>
       </div>
     </Section>
@@ -377,7 +375,7 @@
             link:"https://www.instagram.com/almostpro_lol/",
           },
           {
-            socialmedia:"x",
+            socialmedia:"x-twitter",
             link:"https://x.com/AlmostPro_LoL",
           },
           {

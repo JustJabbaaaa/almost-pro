@@ -19,7 +19,7 @@
             </ul>
           </div>
           <div class="nav__menu--right">
-            <NuxtLink to="https://github.com/konkol00" class="nav__link" target="_blank">Github</NuxtLink>
+            <NuxtLink to="#Contact" class="nav__link">Kontakt</NuxtLink>
           </div>
         </div>
       </div>
@@ -35,20 +35,12 @@
         active: false,
         navigation: [
           {
-            name: 'Home',
-            link: '/#Header',
-          },
-          {
-            name: 'About',
+            name: 'O nas',
             link: '/#About',
           },
           {
-            name: 'Teams',
+            name: 'Drużyny',
             link: '/#Teams',
-          },
-          {
-            name: 'Contact',
-            link: '/#Contact',
           },
         ],
       }

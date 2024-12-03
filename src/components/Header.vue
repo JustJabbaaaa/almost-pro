@@ -1,5 +1,5 @@
 <template>
-  <Section anchor="Header">
+  <Section anchor="Header" grid="2">
     <div class="header__content">
       <div class="header__description">
         <h1 class="header__description--title">almost pro</h1>

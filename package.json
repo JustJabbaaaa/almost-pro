@@ -10,7 +10,9 @@
     "postinstall": "nuxt prepare"
   },
   "devDependencies": {
+    "@iconify-json/fa6-brands": "^1.2.3",
     "@nuxt/devtools": "latest",
+    "@nuxt/icon": "^1.9.0",
     "@nuxtjs/seo": "^2.0.0-rc.23",
     "nuxi": "^3.14.0",
     "nuxt": "^3.13.2",
