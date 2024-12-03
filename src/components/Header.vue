@@ -6,8 +6,7 @@
         <p class="header__description--text">semi-pro e-sport league</p>
       </div>
       <div class="header__buttons">
-        <NuxtLink to="https://github.com/nuxt/nuxt" class="btn btn-primary" target="_blank">NuxtJs</NuxtLink>
-        <NuxtLink to="https://github.com/konkol00/nuxt-starter" class="btn btn-secondary--outline" target="_blank">View Repo</NuxtLink>
+        <NuxtLink to="#About" class="btn btn-primary">Czytaj dalej</NuxtLink>
       </div>
     </div>   
   </Section>

@@ -32,6 +32,9 @@
       color: $secondary-dark;
     }
     &--buttons {
+      img{
+        color:$primary-color;
+      }
       width: 100%;
       display: flex;
       flex-direction: row;

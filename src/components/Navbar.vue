@@ -43,8 +43,8 @@
             link: '/#About',
           },
           {
-            name: 'Services',
-            link: '/#Services',
+            name: 'Teams',
+            link: '/#Teams',
           },
           {
             name: 'Contact',

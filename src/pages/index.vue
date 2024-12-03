@@ -21,18 +21,18 @@
         <NuxtImg src="/images/about/about_image.webp" alt="Section Image" height="800" width="800" loading="lazy" />
       </div>
     </Section>
-    <Section anchor="Services" title="Drużyny" class="chooseLeague">
+    <Section anchor="Teams" title="Drużyny" class="chooseLeague">
             <div class="chooseLeague__buttons">
-            <button :class="{'active': selectedDistrict === 'pierwsza'}" @click="selectDistrict('pierwsza');">
+            <button class="btn btn-primary":class="{'active': selectedDistrict === 'pierwsza'}" @click="selectDistrict('pierwsza');">
                 I LIGA
             </button>
-            <button :class="{'active': selectedDistrict === 'druga'}" to="#druga" @click="selectDistrict('druga');">
+            <button class="btn btn-primary" :class="{'active': selectedDistrict === 'druga'}" to="#druga" @click="selectDistrict('druga');">
                 II LIGA
             </button>
             </div>
     </Section>
    
-    <Section anchor="Teams" grid="4" >
+    <Section anchor="Team" grid="4" >
       <div v-if="selectedDistrict === 'pierwsza'" v-for="item in pierwsza" :key="item.title" class="teams__card" @click="toggleCard(item)">
         <div class="teams__card--front" :class="{ 'hidden': item.flipped }">        
           <div class="teams__card--icon">
@@ -116,17 +116,19 @@
         
       </div>
     </Section>
-    <Section anchor="Contact" title="Contact" subtitle="Build amazing web sites." grid="1">
+    <Section anchor="Contact" title="Kontakt" grid="1">
       <div class="contact__content">
         <div class="contact__content--title">
-          <h3>{{ contact.title }}</h3>
+          <h3>Skontaktuj się z nami</h3>
+          <font-awesome-icon :icon="['fab', 'x-twitter']" />
         </div>
-        <div class="contact__content--description">
+        <!-- <div class="contact__content--description">
           <p>{{ contact.description }}</p>
-        </div>
-        <div class="contact__content--buttons">
-          <NuxtLink :to="`mailto:${contact.mail}`" class="btn btn-primary" target="_blank">{{ contact.btnMail }}</NuxtLink>
-          <NuxtLink :to="`tel:${contact.phone}`" class="btn btn-secondary--outline" target="_blank">{{ contact.btnCall }}</NuxtLink>
+        </div> -->
+        <div class="contact__content--buttons" v-for="item in contact" :key="item.title">
+          <NuxtLink :to="`${item.link}`" target="_blank">
+            <NuxtImg :alt="`Logo ${item.socialmedia}`" :src="`/images/contact/${item.socialmedia}.svg`"/>
+          </NuxtLink>
         </div>
       </div>
     </Section>
@@ -369,14 +371,36 @@
         },
       ],
       
-        contact: {
-          title: 'Get in touch with us to create lightning-fast websites.',
-          description: 'Our team specializes in creating lightning-fast websites that deliver exceptional user experiences. We are dedicated to building web solutions optimized for speed and reliability. Contact us today to discuss how we can help you achieve your website performance goals.',
-          mail: 'contact@kdproject.pl',
-          phone: '+48 123 123 123',
-          btnMail: 'Send Mail',
-          btnCall: 'Call us',
-        }
+        contact: [
+          {
+            socialmedia:"instagram",
+            link:"https://www.instagram.com/almostpro_lol/",
+          },
+          {
+            socialmedia:"x",
+            link:"https://x.com/AlmostPro_LoL",
+          },
+          {
+            socialmedia:"twitch",
+            link:"https://www.twitch.tv/almostpro_lol",
+          },
+          {
+            socialmedia:"youtube",
+            link:"https://www.youtube.com/channel/UC5UrDmPQeRHo1Ts9ielirgQ",
+          },
+          {
+            socialmedia:"tiktok",
+            link:"https://tiktok.com/@almostpro_lol",
+          },
+          {
+            socialmedia:"facebook",
+            link:"https://www.facebook.com/profile.php?id=61559854110269",
+          },
+          {
+            socialmedia:"discord",
+            link:"https://discord.com/invite/fP98YY9zH8",
+          }
+        ]
       }
     },
     methods: {
