@@ -1,4 +1,21 @@
 <script setup>
+  import { ref, onMounted } from 'vue';
+  const videos = ref([]);
+  const fetchLatestVideos = async () => {
+  const channelId = 'UC5UrDmPQeRHo1Ts9ielirgQ';
+  const apiKey = '';
+  const response = await fetch(`https://www.googleapis.com/youtube/v3/search?key=${apiKey}&channelId=${channelId}&order=date&part=snippet,id&maxResults=3`);
+  const data = await response.json();
+  videos.value = data.items.map(item => ({
+    id: item.id.videoId,
+    title: item.snippet.title,
+    thumbnail: item.snippet.thumbnails.high.url
+  }));
+};
+
+onMounted(() => {
+  fetchLatestVideos();
+});
   const pageTitle = 'Home';
   useHead({
     title: pageTitle,
@@ -6,6 +23,7 @@
   function toggleCard(item) {
     item.flipped = !item.flipped
   }
+  
 </script>
 
 <template>
@@ -19,6 +37,14 @@
       </div>
       <div class="about__image">
         <NuxtImg src="/images/about/about_image.webp" alt="Section Image" height="800" width="800" loading="lazy" />
+      </div>
+    </Section>
+    <Section anchor="videos" title="Najnowsze filmy" grid="3">
+      <div class="videos__content" v-for="video in videos" :key="video.id">
+          <a :href="`https://www.youtube.com/watch?v=${video.id}`" target="_blank" class="videos__content--video">
+            <img :src="video.thumbnail" :alt="video.title" />
+            {{ video.title }}
+          </a>
       </div>
     </Section>
     <Section anchor="Teams" title="Drużyny" class="chooseLeague">
@@ -368,8 +394,7 @@
           opgg: ''
         },
       ],
-      
-        contact: [
+      contact: [
           {
             socialmedia:"instagram",
             link:"https://www.instagram.com/almostpro_lol/",
