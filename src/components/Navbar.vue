@@ -14,12 +14,12 @@
           <div class="nav__menu">
             <ul class="nav__list">
               <li class="nav__item" v-for="item in navigation" :key="item.name">
-                <NuxtLink :to="item.link" class="nav__link" @click="active = !active">{{ item.name }}</NuxtLink> 
+                <NuxtLink :to="item.link" class="nav__link" @click="active = !active">{{ item.name }}</NuxtLink>
               </li>
             </ul>
           </div>
           <div class="nav__menu--right">
-            <NuxtLink to="#Contact" class="nav__link">Kontakt</NuxtLink>
+            <NuxtLink to="#footer" class="nav__link">Kontakt</NuxtLink>
           </div>
         </div>
       </div>
@@ -39,8 +39,8 @@
             link: '/#About',
           },
           {
-            name: 'Drużyny',
-            link: '/#Teams',
+            name: 'Liga I',
+            link: 'liga1',
           },
         ],
       }

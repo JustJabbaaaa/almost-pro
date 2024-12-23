@@ -2,10 +2,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 1.5rem 1.25rem;
-  background: rgba($white-color, .75);
-  backdrop-filter: blur(5px);
-  box-shadow: 0 0 35px -15px rgba($secondary-dark, .5);
+  padding: 1rem 1.25rem;
+  margin-top:2rem;
+  backdrop-filter: blur(3px);
   overflow: hidden;
   &__body {
     text-align: center;
@@ -17,6 +16,48 @@
       color: $primary-dark;
       &:hover {
         color: $primary-color;
+      }
+    }
+  }
+  .contact__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 1rem;
+    transition: .3s all ease;
+    &--title {
+      font-weight: 600;
+      text-wrap: pretty;
+      text-align: center;
+      margin-bottom: 1rem;
+      color: $primary-dark;
+    }
+    &--description {
+      font-size: 1.15rem;
+      max-width: 100ch;
+      text-wrap: pretty;
+      text-align: center;
+      font-weight: 500;
+      margin-bottom: 1.5rem;
+      color: $secondary-dark;
+    }
+    &--buttons {
+      justify-content: center;
+      display: flex;
+      flex-direction: row;
+      gap: 4vw;
+      span{
+        color:$primary-dark;
+        transition: all .3s ease-in-out;
+        scale:1.5;
+        &:hover{
+          color:$primary-color;
+          transform: scale(1.5);
+        }
+      }
+      @media screen and (min-width: 992px) {
+        width: 40%;
+        flex-direction: row;
       }
     }
   }

@@ -142,20 +142,6 @@ onMounted(() => {
         
       </div>
     </Section>
-    <Section anchor="Contact" grid="1">
-      <div class="contact__content">
-        <div class="contact__content--title">
-          <h3>Skontaktuj się z nami</h3>
-        </div>
-        <div class="contact__content--buttons" >
-          <div v-for="item in contact" :key="item.title">
-            <NuxtLink :to="`${item.link}`" target="_blank">
-              <Icon :name="`fa6-brands:${item.socialmedia}`" />
-            </NuxtLink>
-          </div>
-        </div>
-      </div>
-    </Section>
     <Footer />
   </div>
 </template>
@@ -394,36 +380,6 @@ onMounted(() => {
           opgg: ''
         },
       ],
-      contact: [
-          {
-            socialmedia:"instagram",
-            link:"https://www.instagram.com/almostpro_lol/",
-          },
-          {
-            socialmedia:"x-twitter",
-            link:"https://x.com/AlmostPro_LoL",
-          },
-          {
-            socialmedia:"twitch",
-            link:"https://www.twitch.tv/almostpro_lol",
-          },
-          {
-            socialmedia:"youtube",
-            link:"https://www.youtube.com/channel/UC5UrDmPQeRHo1Ts9ielirgQ",
-          },
-          {
-            socialmedia:"tiktok",
-            link:"https://tiktok.com/@almostpro_lol",
-          },
-          {
-            socialmedia:"facebook",
-            link:"https://www.facebook.com/profile.php?id=61559854110269",
-          },
-          {
-            socialmedia:"discord",
-            link:"https://discord.com/invite/fP98YY9zH8",
-          }
-        ]
       }
     },
     methods: {
