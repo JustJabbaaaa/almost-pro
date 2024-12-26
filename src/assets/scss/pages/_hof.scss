@@ -1,0 +1,24 @@
+.hof__content{
+    &--title{
+        text-align: center;
+    }
+    &--teamName{
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        @media screen and (min-width: 992px) {
+            order:1;
+          }
+    }
+    &--winners{
+        display:grid;
+        grid-template-columns: 1fr;
+      @media screen and (min-width: 992px) {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    &--Player{
+        display:flex;
+        align-items: center;
+    }
+}

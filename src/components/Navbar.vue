@@ -29,9 +29,6 @@ const items = [
             </ul>
           </div>
           <div class="nav__menu--right">
-            <UDropdown :items="items" mode="hover" :popper="{ placement: 'bottom-start' }">
-              <UButton color="white" label="Options" trailing-icon="i-heroicons-chevron-down-20-solid" />
-            </UDropdown>
             <NuxtLink to="#footer" class="nav__link">Kontakt</NuxtLink>
           </div>
         </div>

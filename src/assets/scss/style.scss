@@ -12,10 +12,13 @@
 @import 'components/buttons';
 @import 'components/header';
 @import 'components/about';
-@import 'components/teams';
 @import 'components/videos';
 
 // Layout
 @import 'layout/section';
 @import 'layout/navbar';
 @import 'layout/footer';
+
+// Pages
+@import 'pages/teams';
+@import 'pages/hof';
