@@ -1,3 +1,13 @@
+<script setup>
+const items = [
+  [{
+    label: 'Profile',
+    avatar: {
+      src: 'https://avatars.githubusercontent.com/u/739984?v=4'
+    }
+  }]
+]
+</script>
 <template>
   <div id="Navbar">
     <nav class="nav">
@@ -19,6 +29,9 @@
             </ul>
           </div>
           <div class="nav__menu--right">
+            <UDropdown :items="items" mode="hover" :popper="{ placement: 'bottom-start' }">
+              <UButton color="white" label="Options" trailing-icon="i-heroicons-chevron-down-20-solid" />
+            </UDropdown>
             <NuxtLink to="#footer" class="nav__link">Kontakt</NuxtLink>
           </div>
         </div>
@@ -45,6 +58,10 @@
           {
             name: 'Liga II',
             link: 'liga2',
+          },
+          {
+            name: 'Ściana chwały',
+            link: 'hof',
           },
         ],
       }
