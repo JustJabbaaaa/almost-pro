@@ -20,10 +20,6 @@ onMounted(() => {
   useHead({
     title: pageTitle,
   }); 
-  function toggleCard(item) {
-    item.flipped = !item.flipped
-  }
-  
 </script>
 
 <template>
@@ -47,101 +43,7 @@ onMounted(() => {
           </a>
       </div>
     </Section>
-    <Section anchor="Teams" title="Drużyny" class="chooseLeague">
-            <div class="chooseLeague__buttons">
-            <button class="btn btn-primary":class="{'active': selectedDistrict === 'pierwsza'}" @click="selectDistrict('pierwsza');">
-                I LIGA
-            </button>
-            <button class="btn btn-primary" :class="{'active': selectedDistrict === 'druga'}" to="#druga" @click="selectDistrict('druga');">
-                II LIGA
-            </button>
-            </div>
-    </Section>
    
-    <Section anchor="Team" grid="4" >
-      <div v-if="selectedDistrict === 'pierwsza'" v-for="item in pierwsza" :key="item.title" class="teams__card" @click="toggleCard(item)">
-        <div class="teams__card--front" :class="{ 'hidden': item.flipped }">        
-          <div class="teams__card--icon">
-            <NuxtImg :alt="`Logo drużyny ${item.team}`" :src="`/images/teams/${item.shortcut}.png`"/>
-          </div>
-          <div class="teams__card--name">
-            <p>{{ item.team }}</p>
-          </div>
-        </div>
-
-        <div class="teams__card--back" :class="{ 'hidden': !item.flipped }">
-          <div class="teams__card--top">
-            <NuxtImg :alt="`Logo drużyny ${item.team}`" :src="`/images/teams/${item.shortcut}.png`"/>
-            <p>{{ item.team }}</p>
-          </div>
-          <p class="balance">W:{{ item.wins }} L:{{ item.loses}}</p>
-          <div class="teams__card--bot">
-            <div class="teams__card--lane">
-              <NuxtImg :alt="`Ikona Toplane`" :src="`/images/linie/top.png`"></NuxtImg>
-              <p>{{ item.top }}</p>
-            </div>
-            <div class="teams__card--lane">
-              <NuxtImg :alt="`Ikona Toplane`" :src="`/images/linie/jungle.png`"></NuxtImg>
-              <p>{{ item.jg }}</p>
-            </div>
-            <div class="teams__card--lane">
-              <NuxtImg :alt="`Ikona Toplane`" :src="`/images/linie/mid.png`"></NuxtImg>
-              <p>{{ item.mid }}</p>
-            </div>
-            <div class="teams__card--lane">
-              <NuxtImg :alt="`Ikona Toplane`" :src="`/images/linie/adc.png`"></NuxtImg>
-              <p>{{ item.adc }}</p>
-            </div>
-            <div class="teams__card--lane">
-              <NuxtImg :alt="`Ikona Toplane`" :src="`/images/linie/support.png`"></NuxtImg>
-              <p>{{ item.sup }}</p>
-            </div>
-          </div>
-        </div>
-        
-      </div>
-      <div v-if="selectedDistrict === 'druga'" v-for="item in druga" :key="item.title" class="teams__card" @click="toggleCard(item)">
-        <div class="teams__card--front" :class="{ 'hidden': item.flipped }">        
-          <div class="teams__card--icon">
-            <NuxtImg :alt="`Logo drużyny ${item.team}`" :src="`/images/teams/${item.shortcut}.png`"/>
-          </div>
-          <div class="teams__card--name">
-            <p>{{ item.team }}</p>
-          </div>
-        </div>
-
-        <div class="teams__card--back" :class="{ 'hidden': !item.flipped }">
-          <div class="teams__card--top">
-            <NuxtImg :alt="`Logo drużyny ${item.team}`" :src="`/images/teams/${item.shortcut}.png`"/>
-            <p>{{ item.team }}</p>
-          </div>
-          <p class="balance">W:{{ item.wins }} L:{{ item.loses}}</p>
-          <div class="teams__card--bot">
-            <div class="teams__card--lane">
-              <NuxtImg :alt="`Ikona Toplane`" :src="`/images/linie/top.png`"></NuxtImg>
-              <p>{{ item.top }}</p>
-            </div>
-            <div class="teams__card--lane">
-              <NuxtImg :alt="`Ikona Toplane`" :src="`/images/linie/jungle.png`"></NuxtImg>
-              <p>{{ item.jg }}</p>
-            </div>
-            <div class="teams__card--lane">
-              <NuxtImg :alt="`Ikona Toplane`" :src="`/images/linie/mid.png`"></NuxtImg>
-              <p>{{ item.mid }}</p>
-            </div>
-            <div class="teams__card--lane">
-              <NuxtImg :alt="`Ikona Toplane`" :src="`/images/linie/adc.png`"></NuxtImg>
-              <p>{{ item.adc }}</p>
-            </div>
-            <div class="teams__card--lane">
-              <NuxtImg :alt="`Ikona Toplane`" :src="`/images/linie/support.png`"></NuxtImg>
-              <p>{{ item.sup }}</p>
-            </div>
-          </div>
-        </div>
-        
-      </div>
-    </Section>
     <Footer />
   </div>
 </template>
@@ -155,7 +57,7 @@ onMounted(() => {
       previousDistrict: null,
         about: {
           title: 'O nas',
-          description: 'blabla',
+          description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
         },
         pierwsza: [
         {

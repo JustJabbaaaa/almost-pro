@@ -42,6 +42,10 @@
             name: 'Liga I',
             link: 'liga1',
           },
+          {
+            name: 'Liga II',
+            link: 'liga2',
+          },
         ],
       }
     },

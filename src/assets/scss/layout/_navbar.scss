@@ -1,13 +1,16 @@
 #Navbar.active {
   .nav {
-    background: rgba($primary-color, .3);
+    background: rgba($primary-light, .5);
     backdrop-filter: blur(5px);
     box-shadow: 0 0 35px -5px rgba($secondary-dark, .5);
+    a{
+      color:$secondary-dark;
+    }
   }
 }
 .nav {
   position: fixed;
-  background-color: $secondary-color;
+  background-color: rgba($secondary-color, .5);
   color:  $primary-color;
   top: 0;
   left: 0;
@@ -15,7 +18,9 @@
   z-index: 1030;
   padding: .5rem 0;
   transition: .3s all ease-in-out;
-
+  a{
+    color:$primary-color;
+  }
   & .container {
     display: flex;
     align-items: center;
