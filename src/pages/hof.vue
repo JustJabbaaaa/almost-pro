@@ -24,8 +24,9 @@ const pageTitle = 'Ściana chwały';
                         </div>
                       </div>
                 </div>
-                <div class="hof__content--mentions" v-for="mention in season.mentions">
-                  <h3>{{ mention.title }}: {{ mention.person }}</h3>
+                <div class="hof__content--mentions">
+                  <h3>Specjalne wyróżnienia</h3>
+                  <p v-for="mention in season.mentions">{{ mention.title }}: {{ mention.person }}</p>
                 </div>
                 <div class="hof__content--tots" v-for="tots in season">
                   <h3>{{ tots.title }}</h3>

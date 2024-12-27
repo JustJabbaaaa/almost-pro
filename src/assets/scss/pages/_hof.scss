@@ -1,14 +1,15 @@
 .hof__content{
     &--title{
         text-align: center;
+        margin:3rem 0;
     }
     &--teamName{
         display:flex;
         justify-content: center;
         align-items: center;
-        @media screen and (min-width: 992px) {
-            order:1;
-          }
+        // @media screen and (min-width: 992px) {
+        //     order:1;
+        //   }
     }
     &--winners{
         display:grid;
@@ -20,5 +21,10 @@
     &--Player{
         display:flex;
         align-items: center;
+        font-size:2rem;
+        gap:.5rem;
+        img{
+            width:40px;
+        }
     }
 }
