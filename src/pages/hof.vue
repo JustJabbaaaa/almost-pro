@@ -11,16 +11,18 @@ const pageTitle = 'Ściana chwały';
             <div class="hof__content" >
               <div class="hof__content--season" v-for="season in seasons">
                 <div class="hof__content--title">
-                    <h3>{{ season.nazwa }}</h3>
+                    <h2>{{ season.nazwa }}</h2>
                 </div>
-                <div class="hof__content--winners" v-for="winner in season" grid="2">
+                <h3 class="\">Zwycięzcami zostali</h3>
+                <div class="hof__content--winners"> 
                       <div class="hof__content--teamName">
-                        <h3>{{ winner.team_name }}</h3>
+                        <NuxtImg :alt="`Ikona ${season.winner.team_name}`" :src="`/images/teams/${season.winner.sc}.png`"></NuxtImg> {{ player }}  
+                        <h3>{{ season.winner.team_name}}</h3>
                       </div>
                       <div class="hof__content--teamPlayers">
-                        <div class="hof__content--Player" v-for="(value, key) in winner.linie">
+                        <div class="hof__content--Player" v-for="(player,key) in season.winner.linie">
                           <NuxtImg :alt="`Ikona ${key}`" :src="`/images/linie/${key}.png`"></NuxtImg>
-                          <p>{{value}}</p>
+                          <p>{{ player }}</p>
                         </div>
                       </div>
                 </div>
@@ -31,7 +33,7 @@ const pageTitle = 'Ściana chwały';
                 <div class="hof__content--tots" v-for="tots in season">
                   <h3>{{ tots.title }}</h3>
                   <p v-for="(player, key) in tots.gracze">
-                    {{key}}: {{ player }}
+                    <NuxtImg :alt="`Ikona ${key}`" :src="`/images/linie/${key}.png`"></NuxtImg> {{ player }}
                   </p>
                 </div>
               </div>
@@ -49,6 +51,7 @@ export default {
             nazwa: "1 SEZON OKRĘGÓWKI",
             winner: {
               team_name: "HINOKAMI KAGURY",
+              sc:"HK",
               linie: {
               top: "Severum",
               jg: "bladeofdarkness",
@@ -80,6 +83,7 @@ export default {
             nazwa: "2 SEZON OKRĘGÓWKI",
             winner: {
               team_name: "ZAPYTAJNIKI",
+              sc:"ZP",
               linie: {
               top: "P1lput",
               jg: "Ceenar",
@@ -169,6 +173,7 @@ export default {
             nazwa: "2 SEZON ALMOST PRO",
             winner: {
               team_name: "NO.7 ESPORTS",
+              sc:"N7",
               linie: {
                 top: "Dawidek",
                 jg: "Chudy Bingus",
