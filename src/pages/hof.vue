@@ -3,38 +3,50 @@ const pageTitle = 'Ściana chwały';
   useHead({
     title: pageTitle,
   });
+  const accordionIndex = ref(null);
+
+function toggleAccordion(index) {
+  if (accordionIndex.value === index) {
+    accordionIndex.value = null;
+  } else {
+    accordionIndex.value = index;
+  }
+}
 </script>
 
 <template>
     <Navbar />
         <Section title="Ściana chwały">
             <div class="hof__content" >
-              <div class="hof__content--season" v-for="season in seasons">
-                <div class="hof__content--title">
-                    <h2>{{ season.nazwa }}</h2>
+              <div class="hof__content--season" v-for="(season, index) in seasons" :key="index">
+                <div class="hof__content--title" @click="toggleAccordion(index)">
+                  <h2>{{ season.nazwa }}</h2>
+                  <span class="accordion-icon" :class="{ 'expanded': accordionIndex === index }"></span>
                 </div>
-                <h3 class="\">Zwycięzcami zostali</h3>
-                <div class="hof__content--winners"> 
-                      <div class="hof__content--teamName">
-                        <NuxtImg :alt="`Ikona ${season.winner.team_name}`" :src="`/images/teams/${season.winner.sc}.png`"></NuxtImg> 
-                        <h3>{{ season.winner.team_name}}</h3>
+                <div class="hof__content--accordion" :class="{ 'expanded': accordionIndex === index }">
+                  <h3>Zwycięzcami zostali</h3>
+                  <div class="hof__content--winners"> 
+                    <div class="hof__content--teamName">
+                      <NuxtImg :alt="`Ikona ${season.winner.team_name}`" :src="`/images/teams/${season.winner.sc}.png`"/>
+                      <h3>{{ season.winner.team_name}}</h3>
+                    </div>
+                    <div class="hof__content--teamPlayers">
+                      <div class="hof__content--Player" v-for="(player,key) in season.winner.linie">
+                        <NuxtImg :alt="`Ikona ${key}`" :src="`/images/linie/${key}.png`"></NuxtImg>
+                        <p>{{ player }}</p>
                       </div>
-                      <div class="hof__content--teamPlayers">
-                        <div class="hof__content--Player" v-for="(player,key) in season.winner.linie">
-                          <NuxtImg :alt="`Ikona ${key}`" :src="`/images/linie/${key}.png`"></NuxtImg>
-                          <p>{{ player }}</p>
-                        </div>
-                      </div>
-                </div>
-                <div class="hof__content--mentions">
-                  <h3>Specjalne wyróżnienia</h3>
-                  <p v-for="mention in season.mentions">{{ mention.title }}: {{ mention.person }}</p>
-                </div>
-                <div class="hof__content--tots" v-for="tots in season">
-                  <h3>{{ tots.title }}</h3>
-                  <p v-for="(player, key) in tots.gracze">
-                    <NuxtImg :alt="`Ikona ${key}`" :src="`/images/linie/${key}.png`"></NuxtImg> {{ player }}
-                  </p>
+                    </div>
+                  </div>
+                  <div class="hof__content--mentions">
+                    <h3>Specjalne wyróżnienia</h3>
+                    <p v-for="mention in season.mentions">{{ mention.title }}: {{ mention.person }}</p>
+                  </div>
+                  <div class="hof__content--tots" v-if="season.tots && season.tots.gracze">
+                    <h3>{{ season.tots.title }}</h3>
+                    <p v-for="(player, key) in season.tots.gracze">
+                      <NuxtImg :alt="`Ikona ${key}`" :src="`/images/linie/${key}.png`"></NuxtImg> {{ player }}
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -95,7 +107,7 @@ export default {
             mentions: {
               mention1: {
                 title:"MVP rozgrywek (mvp per map)",
-                person: "x?"
+                person: "Bart"
               },
               mention2: {
                 title:"Najlepszy komentator",
@@ -110,8 +122,8 @@ export default {
               title: "Drużyna sezonu",
               gracze: {
                 top: "Destro",
-                jg: "x",
-                mid: "x",
+                jg: "Bart",
+                mid: "mtyunik",
                 adc: "Judi",
                 sup: "Szopek"
               }
@@ -126,7 +138,7 @@ export default {
                 top: "Piort",
                 jg: "Kaczy",
                 mid: "Point",
-                adc: "x",
+                adc: "Korel",
                 sup: "Disu"
               },
             },
@@ -145,7 +157,7 @@ export default {
               },
               mention4: {
                 title:"MVP Playoffow",
-                person: "x"
+                person: "Korel"
               }
             },
         },
@@ -158,7 +170,7 @@ export default {
                 top: "Piort",
                 jg: "Kaczy",
                 mid: "Point",
-                adc: "x",
+                adc: "Korel",
                 sup: "Disu"
               },
             },

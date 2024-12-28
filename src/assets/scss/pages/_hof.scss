@@ -1,15 +1,26 @@
 .hof__content{
+  min-height:65vh;
+  &--accordion {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+    &.expanded{
+      max-height:999px; /* adjust this value to match the height of your accordion content */
+    transition: max-height 0.3s ease-in;
+    }
+  }
     &--title{
+      max-width: 100%;
         text-align: center;
+        cursor:pointer;
+        &:hover{
+          transform:scale(1.2);
+        }
     }
     &--season{
-      border-bottom: 1px solid $primary-color;
       padding:2rem 0;
       h3{
         text-align:center;
-      }
-      &:last-child{
-        border:0;
       }
     }
     &--teamName{
