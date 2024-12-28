@@ -16,7 +16,7 @@ const pageTitle = 'Ściana chwały';
                 <h3 class="\">Zwycięzcami zostali</h3>
                 <div class="hof__content--winners"> 
                       <div class="hof__content--teamName">
-                        <NuxtImg :alt="`Ikona ${season.winner.team_name}`" :src="`/images/teams/${season.winner.sc}.png`"></NuxtImg> {{ player }}  
+                        <NuxtImg :alt="`Ikona ${season.winner.team_name}`" :src="`/images/teams/${season.winner.sc}.png`"></NuxtImg> 
                         <h3>{{ season.winner.team_name}}</h3>
                       </div>
                       <div class="hof__content--teamPlayers">
