@@ -3,7 +3,7 @@
   const videos = ref([]);
   const fetchLatestVideos = async () => {
   const channelId = 'UC5UrDmPQeRHo1Ts9ielirgQ';
-  const apiKey = 'AIzaSyDQrAyINT1LHxfoBrIjSOmPJBSMWKRpkdQ';
+  const apiKey = '';
   const response = await fetch(`https://www.googleapis.com/youtube/v3/search?key=${apiKey}&channelId=${channelId}&order=date&part=snippet,id&maxResults=3`);
   const data = await response.json();
   videos.value = data.items.map(item => ({
