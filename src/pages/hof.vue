@@ -18,10 +18,12 @@ function toggleAccordion(index) {
     <Navbar />
         <Section anchor="hof" title="Ściana chwały">
             <div class="hof__content" >
-              <div class="hof__content--season" v-for="(season, index) in seasons" :key="index">
-                <div class="hof__content--title" @click="toggleAccordion(index)">
+              <div class="hof__content--season" @click="toggleAccordion(index)" v-for="(season, index) in seasons" :key="index">
+                <div class="hof__content--title" >
                   <h2>{{ season.nazwa }}</h2>
-                  <span class="accordion-icon" :class="{ 'expanded': accordionIndex === index }"></span>
+                  <span class="accordion-icon" :class="{ 'expanded': accordionIndex === index }">
+                    <!-- <Icon name="mdi:chevron-down" /> -->
+                  </span>
                 </div>
                 <div class="hof__content--accordion" :class="{ 'expanded': accordionIndex === index }">
                   <h3>Zwycięzcami zostali</h3>
