@@ -1,5 +1,6 @@
+#hof{
+  padding-top:100px;
 .hof__content{
-  min-height:65vh;
   &--accordion {
     max-height: 0;
     overflow: hidden;
@@ -65,4 +66,5 @@
         width:40px;
       }
     }
+}
 }

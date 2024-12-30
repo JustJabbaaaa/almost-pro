@@ -16,7 +16,7 @@ function toggleAccordion(index) {
 
 <template>
     <Navbar />
-        <Section title="Ściana chwały">
+        <Section anchor="hof" title="Ściana chwały">
             <div class="hof__content" >
               <div class="hof__content--season" v-for="(season, index) in seasons" :key="index">
                 <div class="hof__content--title" @click="toggleAccordion(index)">
@@ -27,7 +27,7 @@ function toggleAccordion(index) {
                   <h3>Zwycięzcami zostali</h3>
                   <div class="hof__content--winners"> 
                     <div class="hof__content--teamName">
-                      <NuxtImg :alt="`Ikona ${season.winner.team_name}`" :src="`/images/teams/${season.winner.sc}.png`"/>
+                      <NuxtImg :alt="`Logo drużyny ${season.winner.team_name}`" :src="`/images/teams/${season.winner.sc}.png`"/>
                       <h3>{{ season.winner.team_name}}</h3>
                     </div>
                     <div class="hof__content--teamPlayers">

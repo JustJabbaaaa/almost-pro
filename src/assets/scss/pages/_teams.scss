@@ -12,11 +12,11 @@
   }
   
   .teams__card {
+    width: 100%; /* Ensure proper width */
     transition: all .2s ease-in-out;
     background-color: rgba($secondary-light, .2);
     color:$primary-color;
     cursor:pointer;
-    height:100%;
     display:flex;
     flex-direction: column;
     align-items: center;
@@ -44,44 +44,39 @@
     }
   }
   &--back{
+    flex: 1;
+    padding:1.5rem;
     display:flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    gap: 1.5rem;
+    margin:auto;
+    gap:1rem;
     font-size:1.5rem;
-    padding:1rem;
+  }
+  &--front{
+    flex:1;
   }
   &--top{
     display:flex;
     justify-content: center;
     align-items: center;
+    text-align:center;
     img{
-      height: 2rem;
+      height: 1.5rem;
     }
   }
   &--lane{
     display:grid;
     align-items: center;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     img{
+      margin:auto;
       height:20px;
     }
+    p{
+      text-align:center;
+      grid-column: span 2;
+    }
   }
-  }
-}
-.chooseLeague{
-  padding:0px;
-  &__buttons{
-      display:flex;
-      justify-content: center;
-      text-transform: uppercase;
-      button{
-          margin:0 .5rem;
-      }
-      :hover, .active{
-          background-color: $primary-color;
-          color:$secondary-color;
-      }
   }
 }

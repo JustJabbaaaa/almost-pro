@@ -8,7 +8,7 @@
       <div class="header__buttons">
         <NuxtLink to="#About" class="btn btn-primary">Czytaj dalej</NuxtLink>
       </div>
-    </div>   
+    </div> 
   </Section>
 </template>
 

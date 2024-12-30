@@ -3,7 +3,7 @@
   const videos = ref([]);
   const fetchLatestVideos = async () => {
   const channelId = 'UC5UrDmPQeRHo1Ts9ielirgQ';
-  const apiKey = 'AIzaSyDQrAyINT1LHxfoBrIjSOmPJBSMWKRpkdQ';
+  const apiKey = '';
   const response = await fetch(`https://www.googleapis.com/youtube/v3/search?key=${apiKey}&channelId=${channelId}&order=date&part=snippet,id&maxResults=3`);
   const data = await response.json();
   videos.value = data.items.map(item => ({
@@ -26,7 +26,7 @@ onMounted(() => {
   <div class="app home">
     <Navbar />
     <Header />
-    <Section anchor="About" title="O nas" subtitle="Blablabla" grid="2">
+    <Section anchor="About" title="O nas" subtitle="" grid="2">
       <div class="about__content">
         <h3>{{ about.title }}</h3>
         <p>{{ about.description }}</p>
@@ -53,235 +53,10 @@ onMounted(() => {
     name: 'Home',
     data() {
       return {
-        selectedDistrict: 'pierwsza',
-      previousDistrict: null,
         about: {
-          title: 'O nas',
-          description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-        },
-        pierwsza: [
-        {
-          team: 'BEIFENG ESPORTS',
-          shortcut: 'BE',
-          wins: 5,
-          loses: 3,
-          top: 'Grundi',
-          jg: 'Lissek',
-          mid: 'px3ke',
-          adc: 'ek1pa',
-          sup: 'dawid',
-          opgg: ''
-        },
-        {
-          team: 'BLOODY WOUNDS',
-          shortcut: 'BW',
-          wins: 5,
-          loses: 3,
-          top: 'Grundi',
-          jg: 'Lissek',
-          mid: 'px3ke',
-          adc: 'ek1pa',
-          sup: 'dawid',
-          opgg: ''
-        },
-        {
-          team: 'Chaos Banes',
-          shortcut: 'CB',
-          wins: 5,
-          loses: 3,
-          top: 'Grundi',
-          jg: 'Lissek',
-          mid: 'px3ke',
-          adc: 'ek1pa',
-          sup: 'dawid',
-          opgg: ''
-        },
-        {
-          team: 'Chaos Harbringers',
-          shortcut: 'CE',
-          wins: 5,
-          loses: 3,
-          top: 'Grundi',
-          jg: 'Lissek',
-          mid: 'px3ke',
-          adc: 'ek1pa',
-          sup: 'dawid',
-          opgg: ''
-        },
-        {
-          team: 'Gejmingowi Emeryci',
-          shortcut: 'GEJ',
-          wins: 5,
-          loses: 3,
-          top: 'Grundi',
-          jg: 'Lissek',
-          mid: 'px3ke',
-          adc: 'ek1pa',
-          sup: 'dawid',
-          opgg: ''
-        },
-        {
-          team: 'No.7',
-          shortcut: 'N7',
-          wins: 5,
-          loses: 3,
-          top: 'Grundi',
-          jg: 'Lissek',
-          mid: 'px3ke',
-          adc: 'ek1pa',
-          sup: 'dawid',
-          opgg: ''
-        },
-        {
-          team: 'Chaos Oni',
-          shortcut: 'ONI',
-          wins: 6,
-          loses: 3,
-          top: 'Grundi',
-          jg: 'Lissek',
-          mid: 'px3ke',
-          adc: 'ek1pa',
-          sup: 'dawid',
-          opgg: ''
-        },
-        {
-          team: 'Reve Esports',
-          shortcut: 'REV',
-          wins: 8,
-          loses: 3,
-          top: 'elobenc',
-          jg: 'Lissek',
-          mid: 'px3ke',
-          adc: 'ek1pa',
-          sup: 'dawid',
-          opgg: ''
-        },
-        {
-          team: 'Tuesday Slots',
-          captain: 'px3ke',
-          captainDC: 'px3ke#1234',
-          shortcut: 'TS',
-          wins: 13,
-          loses: 21,
-          top: 'Grundi',
-          jg: 'Lissek',
-          mid: 'px3ke',
-          adc: 'ek1pa',
-          sup: 'dawid',
-          opgg: 'https://www.op.gg/summoners/euw/Adison-2137'
-        },
-      ],
-      druga: [      
-        {
-          team: 'BLOODY WOUNDS',
-          shortcut: 'BW',
-          wins: 5,
-          loses: 3,
-          top: 'Grundi',
-          jg: 'Lissek',
-          mid: 'px3ke',
-          adc: 'ek1pa',
-          sup: 'dawid',
-          opgg: ''
-        },{
-          team: 'BEIFENG ESPORTS',
-          shortcut: 'BE',
-          wins: 21,
-          loses: 13,
-          top: 'Grundi',
-          jg: 'Lissek',
-          mid: 'px3ke',
-          adc: 'ek1pa',
-          sup: 'dawid',
-          opgg: ''
-        },
-        {
-          team: 'Chaos Banes',
-          shortcut: 'CB',
-          wins: 5,
-          loses: 3,
-          top: 'Grundi',
-          jg: 'Lissek',
-          mid: 'px3ke',
-          adc: 'ek1pa',
-          sup: 'dawid',
-          opgg: ''
-        },
-        {
-          team: 'Chaos Harbringers',
-          shortcut: 'CE',
-          wins: 5,
-          loses: 3,
-          top: 'Grundi',
-          jg: 'Lissek',
-          mid: 'px3ke',
-          adc: 'ek1pa',
-          sup: 'dawid',
-          opgg: ''
-        },
-        {
-          team: 'Gejmingowi Emeryci',
-          shortcut: 'GEJ',
-          wins: 5,
-          loses: 3,
-          top: 'Grundi',
-          jg: 'Lissek',
-          mid: 'px3ke',
-          adc: 'ek1pa',
-          sup: 'dawid',
-          opgg: ''
-        },
-        {
-          team: 'No.7',
-          shortcut: 'N7',
-          wins: 5,
-          loses: 3,
-          top: 'Grundi',
-          jg: 'Lissek',
-          mid: 'px3ke',
-          adc: 'ek1pa',
-          sup: 'dawid',
-          opgg: ''
-        },
-        {
-          team: 'Chaos Oni',
-          shortcut: 'ONI',
-          wins: 6,
-          loses: 3,
-          top: 'Grundi',
-          jg: 'Lissek',
-          mid: 'px3ke',
-          adc: 'ek1pa',
-          sup: 'dawid',
-          opgg: ''
-        },
-        {
-          team: 'Reve Esports',
-          shortcut: 'REV',
-          wins: 8,
-          loses: 3,
-          top: 'Grundi',
-          jg: 'Lissek',
-          mid: 'px3ke',
-          adc: 'ek1pa',
-          sup: 'dawid',
-          opgg: ''
-        },
-        {
-          team: 'Tuesday Slots',
-          captain: 'px3ke',
-          captainDC: 'px3ke#1234',
-          shortcut: 'TS',
-          wins: 13,
-          loses: 10,
-          top: 'Grundi',
-          jg: 'Lissek',
-          mid: 'px3ke',
-          adc: 'ek1pa',
-          sup: 'dawid',
-          opgg: ''
-        },
-      ],
+          title: '',
+          description: "Łączymy graczy i fanów League of Legends w miejscu pełnym emocji i rywalizacji. Organizujemy ligi i turnieje online, tworząc przestrzeń, gdzie możesz rozwijać swoje umiejętności, zdobywać doświadczenie i poznawać nowych ludzi. Jeśli kochasz wyzwania i dobrą atmosferę, Almost Pro jest dla Ciebie!",
+        }
       }
     },
     methods: {
