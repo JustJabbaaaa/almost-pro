@@ -1,4 +1,5 @@
 <script setup>
+import hof from '/tabele/hof.json';
 const pageTitle = 'Ściana chwały';
   useHead({
     title: pageTitle,
@@ -18,8 +19,8 @@ function toggleAccordion(index) {
     <Navbar />
         <Section anchor="hof" title="Ściana chwały">
             <div class="hof__content" >
-              <div class="hof__content--season" @click="toggleAccordion(index)" v-for="(season, index) in seasons" :key="index">
-                <div class="hof__content--title" >
+              <div class="hof__content--season"  v-for="(season, index) in hof" :key="index">
+                <div class="hof__content--title" @click="toggleAccordion(index)">
                   <h2>{{ season.nazwa }}</h2>
                   <span class="accordion-icon" :class="{ 'expanded': accordionIndex === index }">
                     <!-- <Icon name="mdi:chevron-down" /> -->
@@ -39,7 +40,7 @@ function toggleAccordion(index) {
                       </div>
                     </div>
                   </div>
-                  <div class="hof__content--mentions">
+                  <div class="hof__content--mentions" v-if="season.mentions">
                     <h3>Specjalne wyróżnienia</h3>
                     <p v-for="mention in season.mentions">{{ mention.title }}: {{ mention.person }}</p>
                   </div>
@@ -60,164 +61,7 @@ export default {
     name: 'Home',
     data() {
       return {
-        seasons: {
-        firstSeason: {
-            nazwa: "1 SEZON OKRĘGÓWKI",
-            winner: {
-              team_name: "HINOKAMI KAGURY",
-              sc:"HK",
-              linie: {
-              top: "Severum",
-              jg: "bladeofdarkness",
-              mid: "niewiem",
-              adc: "vademori",
-              sup: "TheWap"
-              },
-            },
-            mentions: {
-              mention1: {
-                title:"MVP Finału",
-                person: "Vademori"
-              },
-              mention2: {
-                title:"MVP rozgrywek",
-                person: "TheWap"
-              },
-              mention3: {
-                title:"MVP Przegranych",
-                person: "Bołubał"
-              },
-              mention4: {
-                title:"Ulubieniec Sponsora",
-                person: "Datakos"
-              }
-            }
-        },
-        secondSeason:{
-            nazwa: "2 SEZON OKRĘGÓWKI",
-            winner: {
-              team_name: "ZAPYTAJNIKI",
-              sc:"ZP",
-              linie: {
-              top: "P1lput",
-              jg: "Ceenar",
-              mid: "Wyściguwka",
-              adc: "Lamston",
-              sup: "Szopek"
-              },
-            },
-            mentions: {
-              mention1: {
-                title:"MVP rozgrywek (mvp per map)",
-                person: "Bart"
-              },
-              mention2: {
-                title:"Najlepszy komentator",
-                person: "Skonn"
-              },
-              mention3: {
-                title:"Najlepszy pickem",
-                person: "Adsawo"
-              }
-            },
-            tots: {
-              title: "Drużyna sezonu",
-              gracze: {
-                top: "Destro",
-                jg: "Bart",
-                mid: "mtyunik",
-                adc: "Judi",
-                sup: "Szopek"
-              }
-            }
-        },
-        thirdSeason:{
-            nazwa: "3 SEZON OKRĘGÓWKI",
-            winner: {
-              team_name: "ONION TEAM",
-              linie: {
-                coach: "mikomiko",
-                top: "Piort",
-                jg: "Kaczy",
-                mid: "Point",
-                adc: "Korel",
-                sup: "Disu"
-              },
-            },
-            mentions: {
-              mention1: {
-                title:"Najlepszy komentator",
-                person: "Skonn"
-              },
-              mention2: {
-                title:"Najlepszy coach",
-                person: "mikomiko"
-              },
-              mention3: {
-                title:"MVP Swissa",
-                person: "Destro"
-              },
-              mention4: {
-                title:"MVP Playoffow",
-                person: "Korel"
-              }
-            },
-        },
-        firstAlmost:{
-            nazwa: "1 SEZON ALMOST PRO OKRĘGÓWKI",
-            winner: {
-              team_name: "ONION TEAM",
-              linie: {
-                coach: "mikomiko",
-                top: "Piort",
-                jg: "Kaczy",
-                mid: "Point",
-                adc: "Korel",
-                sup: "Disu"
-              },
-            },
-            mentions: {
-              mention1: {
-                title:"MVP Sezonu",
-                person: "Bungal"
-              },
-            },
-        },
-        secondAlmost:{
-            nazwa: "2 SEZON ALMOST PRO",
-            winner: {
-              team_name: "NO.7 ESPORTS",
-              sc:"N7",
-              linie: {
-                top: "Dawidek",
-                jg: "Chudy Bingus",
-                mid: "Siódmy",
-                adc: "Katril",
-                sup: "Słoniu"
-              },
-            },
-            mentions: {
-              mention1: {
-                title:"MVP Sezonu",
-                person: "Katril"
-              },
-              mention2: {
-                title:"MVP Caster",
-                person: "Jaskier"
-              },
-            },
-            tots: {
-              title: "Drużyna sezonu",
-              gracze: {
-                top: "FILL 1",
-                jg: "Lumino & Chudy Bingus",
-                mid: "Oogway",
-                adc: "Katril",
-                sup: "Słoniu"
-              }
-            }
-        }
-      }
+        data: hof
       }
     }
 }
