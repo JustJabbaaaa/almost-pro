@@ -1,3 +1,6 @@
+#hof {
+  padding-top:100px;
+}
 .hof__content{
   min-height:65vh;
   &--accordion {
@@ -5,18 +8,17 @@
     overflow: hidden;
     transition: max-height 0.3s ease-out;
     &.expanded{
-      max-height:999px; /* adjust this value to match the height of your accordion content */
+      max-height:1300px; /* adjust this value to match the height of your accordion content */
     transition: max-height 0.3s ease-in;
     }
   }
     &--title{
       max-width: 100%;
-        text-align: center;
-        cursor:pointer;
+      text-align: center;
+      cursor:pointer;
     }
     &--season{
       padding:1rem 0;
-
       border-bottom:1px solid $primary-color;
       border-left: 1px solid $primary-color;
       border-right: 1px solid $primary-color;

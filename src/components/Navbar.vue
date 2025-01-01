@@ -60,6 +60,10 @@ const items = [
             name: 'Ściana chwały',
             link: 'hof',
           },
+          {
+            name: 'Współpraca',
+            link: 'wspolpraca',
+          },
         ],
       }
     },
