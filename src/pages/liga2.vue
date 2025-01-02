@@ -10,7 +10,6 @@ const pageTitle = 'Druga Liga';
 })));
 
 function toggleCard(item) {
-  console.log(item);
   item.flipped = !item.flipped; // Toggle the flipped state
 }
 

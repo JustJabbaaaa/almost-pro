@@ -6,11 +6,11 @@ const pageTitle = 'Pierwsza Liga';
   });
   const data = reactive(liga1.map(item => ({
   ...item,
-  flipped: false, // Ensure each item has a flipped property
+  flipped: false,
 })));
 
 function toggleCard(item) {
-  item.flipped = !item.flipped; // Toggle the flipped state
+  item.flipped = !item.flipped;
 }
 
 </script>

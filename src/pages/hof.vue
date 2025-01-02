@@ -35,20 +35,24 @@ function toggleAccordion(index) {
                     </div>
                     <div class="hof__content--teamPlayers">
                       <div class="hof__content--Player" v-for="(player,key) in season.winner.linie">
-                        <NuxtImg :alt="`Ikona ${key}`" :src="`/images/linie/${key}.png`"></NuxtImg>
+                        <NuxtImg class="rola" :alt="`Ikona ${key}`" :src="`/images/linie/${key}.png`"></NuxtImg>
                         <p>{{ player }}</p>
                       </div>
                     </div>
                   </div>
                   <div class="hof__content--mentions" v-if="season.mentions">
                     <h3>Specjalne wyróżnienia</h3>
-                    <p v-for="mention in season.mentions">{{ mention.title }}: {{ mention.person }}</p>
+                    <div class="hof__content--mentionsBox" v-for="mention in season.mentions">
+                      <h4>{{ mention.title }}</h4>
+                      <p>{{ mention.person }}</p>
+                    </div>
                   </div>
                   <div class="hof__content--tots" v-if="season.tots && season.tots.gracze">
                     <h3>{{ season.tots.title }}</h3>
-                    <p v-for="(player, key) in season.tots.gracze">
-                      <NuxtImg :alt="`Ikona ${key}`" :src="`/images/linie/${key}.png`"></NuxtImg> {{ player }}
-                    </p>
+                    <div class="hof__content--totsPlayer" v-for="(player, key) in season.tots.gracze">
+                      <NuxtImg class="rola" :alt="`Ikona ${key}`" :src="`/images/linie/${key}.png`"></NuxtImg> 
+                      <p>{{ player }}</p>
+                    </div>
                   </div>
                 </div>
               </div>
