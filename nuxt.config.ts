@@ -14,7 +14,8 @@ export default defineNuxtConfig({
     '@nuxtjs/seo',
     '@nuxt/image',
     'nuxt-delay-hydration',
-    '@nuxt/icon'
+    '@nuxt/icon',
+    'vue3-carousel-nuxt'
   ],
 
   site: {
