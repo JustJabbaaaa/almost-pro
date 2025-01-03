@@ -60,7 +60,7 @@ onMounted(() => {
       </div>
     </Section>
     <!-- <iframe loading="lazy" width="100%" height="1000px" src="https://syndication.twitter.com/srv/timeline-profile/screen-name/Venek__?frame=false&hideBorder=false&hideFooter=false&hideHeader=false&hideScrollBar=false&origin=localhost&showHeader=true&showReplies=false&transparent=false&theme=light&width=550px" style="height: 100%;" frameborder="0" scrolling="no"></iframe> -->
-    <div ref="twitterFeed"></div>
+    <!-- <div ref="twitterFeed"></div> -->
     <Footer />
   </div>
 </template>
