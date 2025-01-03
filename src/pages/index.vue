@@ -1,6 +1,7 @@
 <script setup>
   import { ref, onMounted } from 'vue';
   const videos = ref([]);
+  const twitterFeed = ref(null);
   const fetchLatestVideos = async () => {
   const channelId = 'UC5UrDmPQeRHo1Ts9ielirgQ';
   const apiKey = '';
@@ -15,6 +16,21 @@
 
 onMounted(() => {
   fetchLatestVideos();
+  const script = document.createElement('script');
+  script.src = 'https://platform.twitter.com/widgets.js';
+  script.async = true;
+  script.onload = () => {
+    // Initialize the Twitter widget
+    if (twitterFeed.value) {
+      window.twttr.widgets.load(twitterFeed.value);
+    }
+  };
+  document.body.appendChild(script);
+
+  // Add the Twitter embed code
+  twitterFeed.value.innerHTML = `
+    <a class="twitter-timeline" data-chrome="noscrollbar noheader" data-theme="dark" data-height="400px" data-width="80vw"href="https://twitter.com/Venek__?ref_src=twsrc%5Etfw">Tweets by AlmostPro_LoL</a>
+  `;
 });
   const pageTitle = 'Home';
   useHead({
@@ -43,7 +59,8 @@ onMounted(() => {
           </a>
       </div>
     </Section>
-   
+    <!-- <iframe loading="lazy" width="100%" height="1000px" src="https://syndication.twitter.com/srv/timeline-profile/screen-name/Venek__?frame=false&hideBorder=false&hideFooter=false&hideHeader=false&hideScrollBar=false&origin=localhost&showHeader=true&showReplies=false&transparent=false&theme=light&width=550px" style="height: 100%;" frameborder="0" scrolling="no"></iframe> -->
+    <div ref="twitterFeed"></div>
     <Footer />
   </div>
 </template>
@@ -51,6 +68,7 @@ onMounted(() => {
 <script>
   export default {
     name: 'Home',
+
     data() {
       return {
         about: {

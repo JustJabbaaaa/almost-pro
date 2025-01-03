@@ -9,6 +9,9 @@
         <NuxtLink to="#About" class="btn btn-primary">Czytaj dalej</NuxtLink>
       </div>
     </div> 
+    <div class="stream">
+      <iframe src="https://player.twitch.tv/?channel=almostpro_lol&parent=localhost"></iframe>
+    </div>
   </Section>
 </template>
 

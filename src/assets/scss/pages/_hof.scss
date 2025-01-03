@@ -6,10 +6,10 @@
   &--accordion {
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.3s ease-out;
+    transition: max-height 0.2s ease-out;
     &.expanded{
-      max-height:1300px; /* adjust this value to match the height of your accordion content */
-    transition: max-height 0.3s ease-in;
+      max-height:2000px; /* adjust this value to match the height of your accordion content */
+    transition: max-height 0.2s ease-in;
     }
   }
     &--title{
