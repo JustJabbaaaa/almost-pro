@@ -12,7 +12,7 @@ const items = [
   <div id="Navbar">
     <nav class="nav">
       <div class="container">
-        <NuxtLink to="/" class="nav__brand" aria-label="Go to homepage"><NuxtImg src="/images/logo/logo_almost.png" alt="Nuxt logo" height="60" width="60"/></NuxtLink>
+        <NuxtLink to="/" class="nav__brand" aria-label="Go to homepage"><NuxtImg src="/images/logo/logo_almost.png" alt="Logo almost pro" height="50" width="60"/></NuxtLink>
         <button class="nav__toggler" type="button" aria-label="Toggle navigation" @click="active = !active">
           <div class="nav__toggler--btn" :class="{ 'active': active }">
             <span></span>
@@ -44,10 +44,10 @@ const items = [
       return {
         active: false,
         navigation: [
-          {
-            name: 'O nas',
-            link: '/#About',
-          },
+          // {
+          //   name: 'O nas',
+          //   link: '/#About',
+          // },
           {
             name: 'Liga I',
             link: 'liga1',

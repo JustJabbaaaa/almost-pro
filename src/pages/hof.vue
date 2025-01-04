@@ -23,7 +23,7 @@ function toggleAccordion(index) {
                 <div class="hof__content--title" @click="toggleAccordion(index)">
                   <h2>{{ season.nazwa }}</h2>
                   <span class="accordion-icon" :class="{ 'expanded': accordionIndex === index }">
-                    <!-- <Icon name="mdi:chevron-down" /> -->
+                    <Icon name="mdi:chevron-down" />
                   </span>
                 </div>
                 <div class="hof__content--accordion" :class="{ 'expanded': accordionIndex === index }">

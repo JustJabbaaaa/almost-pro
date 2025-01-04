@@ -33,7 +33,10 @@ const config = {
         <Carousel v-bind="config">
             <Slide v-for="item in stanowiska" :key="item">
                 <div class="carousel__slide--job">{{ item.job }}</div>
-                <p class="carousel__slide--description">{{ item.description }}</p>
+                <div class="carousel__slide--description">
+                  <p>{{ item.description }}</p>
+                  <!-- <NuxtImg :alt="`Logo drużyny ${item.team}`" :src="`/images/teams/BW.png`"/> -->
+                </div>
             </Slide>
             <template #addons>
             <Navigation />

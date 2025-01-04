@@ -13,10 +13,27 @@
     }
   }
     &--title{
+      display:flex;
+      align-items: center;
+      justify-content: center;
       max-width: 100%;
       text-align: center;
+      h2{
+        width:95%;
+      }
       cursor:pointer;
-    }
+      .iconify{
+        color:$primary-color;
+        transform:scale(1.5);
+        transition: ease-in .2s;
+      }
+      .expanded{
+        .iconify{
+          transform:rotate(180deg) scale(1.5);
+          transition: ease-out .2s;
+        }
+      }
+    } 
     &--season{
       padding:1rem 0;
       border-bottom:1px solid $primary-color;
@@ -31,7 +48,7 @@
       }
       &:hover{
         background-color: rgba($secondary-light, .3);
-        .hof__content--title{
+        h2{
           transform:scale(1.2);
         }
       }

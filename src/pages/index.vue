@@ -16,21 +16,21 @@
 
 onMounted(() => {
   fetchLatestVideos();
-  const script = document.createElement('script');
-  script.src = 'https://platform.twitter.com/widgets.js';
-  script.async = true;
-  script.onload = () => {
-    // Initialize the Twitter widget
-    if (twitterFeed.value) {
-      window.twttr.widgets.load(twitterFeed.value);
-    }
-  };
-  document.body.appendChild(script);
+  // const script = document.createElement('script');
+  // script.src = 'https://platform.twitter.com/widgets.js';
+  // script.async = true;
+  // script.onload = () => {
+  //   // Initialize the Twitter widget
+  //   if (twitterFeed.value) {
+  //     window.twttr.widgets.load(twitterFeed.value);
+  //   }
+  // };
+  // document.body.appendChild(script);
 
-  // Add the Twitter embed code
-  twitterFeed.value.innerHTML = `
-    <a class="twitter-timeline" data-chrome="noscrollbar noheader" data-theme="dark" data-height="400px" data-width="80vw"href="https://twitter.com/Venek__?ref_src=twsrc%5Etfw">Tweets by AlmostPro_LoL</a>
-  `;
+  // // Add the Twitter embed code
+  // twitterFeed.value.innerHTML = `
+  //   <a class="twitter-timeline" data-chrome="noscrollbar noheader" data-theme="dark" data-height="400px" data-width="80vw"href="https://twitter.com/Venek__?ref_src=twsrc%5Etfw">Tweets by AlmostPro_LoL</a>
+  // `;
 });
   const pageTitle = 'Home';
   useHead({
