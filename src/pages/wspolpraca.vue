@@ -9,9 +9,9 @@ const pageTitle = 'Współpraca';
 const config = {
     wrapAround: true,
     breakpointMode: 'carousel',
-    autoplay: 4000,
-    pauseAutoplayOnHover: true,
-    transition:400
+    // autoplay: 4000,
+    // pauseAutoplayOnHover: true,
+    // transition:400
 }
 </script>
 <template>

@@ -3,13 +3,16 @@
 }
 .hof__content{
   min-height:65vh;
+.bg{
+  background-color: rgba($secondary-light, .3);
+}
   &--accordion {
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.2s ease-out;
     &.expanded{
-      max-height:2000px; /* adjust this value to match the height of your accordion content */
-    transition: max-height 0.2s ease-in;
+      max-height:2000px;
+      transition: max-height 0.2s ease-in;
     }
   }
     &--title{
@@ -19,6 +22,7 @@
       max-width: 100%;
       text-align: center;
       h2{
+        font-size: clamp(1.5rem, 3vw, 3rem);
         width:95%;
       }
       cursor:pointer;

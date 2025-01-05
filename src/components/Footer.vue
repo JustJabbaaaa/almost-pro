@@ -3,7 +3,7 @@
     <div class="footer__body">
       <div class="contact__content">
         <div class="contact__content--title">
-          <h3>Skontaktuj się z nami</h3>
+          <h3>NASZE SOCIAL MEDIA</h3>
         </div>
         <div class="contact__content--buttons" >
           <div v-for="item in contact" :key="item.title">

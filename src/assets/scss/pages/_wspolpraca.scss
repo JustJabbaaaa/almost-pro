@@ -1,7 +1,7 @@
 #wspolpraca{
     padding-top:100px;
     .wspolpraca__box{
-        font-size:1.2rem;
+        font-size:clamp(1rem, 2vw, 1.5rem);
         display:flex;
         flex-direction: column;
         gap:2rem;
@@ -15,7 +15,8 @@
         display:block;
     }
     .carousel {
-        padding:30px;
+        padding:0px 50px;
+        padding-bottom:30px;
         --vc-pgn-active-color:#f2cd00;
         --vc-pgn-background-color:#1b1b24;
         &__icon{
@@ -30,7 +31,7 @@
             flex-direction: row;
             align-items: center;
             p{
-                font-size:1.5rem
+                font-size:clamp(.9rem, 2vw, 1.5rem);
             }
             img{
                width:50%;
@@ -40,9 +41,6 @@
         &--job{
             font-size:2rem;
             font-weight: 600;
-        }
-        &--description{
-            width:90%;
         }
     }
     }
