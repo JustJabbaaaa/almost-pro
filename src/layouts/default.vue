@@ -1,7 +1,7 @@
 <script setup>
   const pageUrl = 'Nuxt-Starter';
-  const pageTitle = 'Nuxt-Starter';
-  const pageDescription = 'Responsive, fast and modern Nuxt.js starter project';
+  const pageTitle = 'Almost Pro';
+  const pageDescription = 'Społeczność, w której rywalizacja staje się pasją';
   useHead({
     htmlAttrs: {
       lang: 'pl'

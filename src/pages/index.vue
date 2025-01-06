@@ -32,7 +32,7 @@ onMounted(() => {
   //   <a class="twitter-timeline" data-chrome="noscrollbar noheader" data-theme="dark" data-height="400px" data-width="80vw"href="https://twitter.com/Venek__?ref_src=twsrc%5Etfw">Tweets by AlmostPro_LoL</a>
   // `;
 });
-  const pageTitle = 'Home';
+  const pageTitle = 'Strona główna';
   useHead({
     title: pageTitle,
   }); 
