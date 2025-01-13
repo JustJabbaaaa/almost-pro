@@ -1,0 +1,100 @@
+#contact{
+    color: white;
+    padding: 60px 20px; 
+    text-align: center;
+    margin-top: 80px;
+    margin-bottom: -70px;
+    .contact{
+        &__title{
+            h1{
+                font-size:clamp(2rem, 4vw, 3.8rem);
+                font-weight: 700;
+                margin-bottom: 20px;
+                color: #f2cd00;
+                letter-spacing: 5px;    
+            }
+            p{
+                font-size:clamp(1rem, 2vw, 1.6rem);
+                max-width: 700px;
+                margin: 0 auto;
+                line-height: 1.8;
+                letter-spacing: 2px;
+            }
+        }
+        &__form{
+            animation: fadeIn 1s ease-out;
+            background-color: #272734;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 12px;
+            padding: 40px 20px;
+            text-align: center;
+            margin: 80px auto;
+            max-width: 600px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.7); /* Subtelny cień */
+            backdrop-filter: blur(10px); /* Efekt rozmycia tła */
+            letter-spacing: 2px;
+            h2{
+                font-size: 2.5rem;
+                margin-bottom: 20px;
+                color: #f2cd00; 
+                font-weight: bold;
+            }
+            form {
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+            }
+            label {
+                font-size: 1.2rem;
+                text-align: left;
+                color: #fff;
+                margin-bottom: 10px; 
+            }
+            input, textarea {
+                width: 100%;
+                padding: 15px;
+                font-size: 1.1rem;
+                margin-top: 10px;
+                border: 1px solid rgba(255, 255, 255, 0.3);
+                border-radius: 8px;
+                background: rgba(255, 255, 255, 0.05);
+                color: #fff;
+                transition: border-color 0.3s, background-color 0.3s;
+            }
+            input:focus, textarea:focus{
+                border-color: #f2cd00;
+                outline: none;
+                background-color: rgba(255, 255, 255, 0.1);
+            }
+            textarea {
+                height: 120px;
+                resize: none;
+            }
+            button {
+                padding: 15px;
+                font-size: 1.3rem;
+                background: #f2cd00;
+                color: #272734;
+                border: none;
+                border-radius: 8px;
+                cursor: pointer;
+                transition: background-color 0.3s, transform 0.2s;
+                font-weight: bold;
+                &:hover {
+                    background: #ffd700;
+                    transform: translateY(-3px); /* Subtelne podniesienie przy najechaniu */
+                }
+            }
+        }
+    }
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+}

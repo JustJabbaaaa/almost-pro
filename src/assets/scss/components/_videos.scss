@@ -1,4 +1,13 @@
+#videos{
+    background: white;
+    .section__title{
+        color:$secondary-color;
+        font-size: clamp(1.2rem, 3vw, 3rem);
+        letter-spacing:5px;
+        text-transform:uppercase;
+    }
 .videos__content {
+    
     &--video{
         display:flex;
         flex-direction: column;
@@ -18,4 +27,4 @@
             }
         }
     }
-}
+}}

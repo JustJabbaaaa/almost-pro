@@ -17,7 +17,9 @@ function toggleAccordion(index) {
 
 <template>
     <Navbar />
-        <Section anchor="hof" title="Ściana chwały">
+        <Section anchor="hof">
+          <div class="hof__over">
+            <h1>Ściana chwały</h1>
             <div class="hof__content" >
               <div class="hof__content--season" :class="{ 'bg': accordionIndex === index }" v-for="(season, index) in hof" :key="index">
                 <div class="hof__content--title" @click="toggleAccordion(index)">
@@ -41,6 +43,7 @@ function toggleAccordion(index) {
                     </div>
                   </div>
                   <div class="hof__content--mentions" v-if="season.mentions">
+                    <hr>
                     <h3>Specjalne wyróżnienia</h3>
                     <div class="hof__content--mentionsBox" v-for="mention in season.mentions">
                       <h4>{{ mention.title }}</h4>
@@ -48,6 +51,7 @@ function toggleAccordion(index) {
                     </div>
                   </div>
                   <div class="hof__content--tots" v-if="season.tots && season.tots.gracze">
+                    <hr>
                     <h3>{{ season.tots.title }}</h3>
                     <div class="hof__content--totsPlayer" v-for="(player, key) in season.tots.gracze">
                       <NuxtImg class="rola" :alt="`Ikona ${key}`" :src="`/images/linie/${key}.png`"></NuxtImg> 
@@ -57,6 +61,7 @@ function toggleAccordion(index) {
                 </div>
               </div>
             </div>
+          </div>
         </Section>
     <Footer />
 </template>

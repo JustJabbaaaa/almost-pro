@@ -1,8 +1,31 @@
 #hof {
-  padding-top:100px;
+  color:white;
+  padding: 100px 50px;
+  max-width: 1200px;
+  margin: 80px auto;
 }
-.hof__content{
-  min-height:65vh;
+.hof{
+  &__over{
+  padding: 30px;
+  background-color: #272734;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    h1{
+      text-transform: uppercase;
+      letter-spacing: 5px;
+      font-size: clamp(1.8rem, 3vw, 3rem);
+      margin-bottom: 20px;
+      color: #f2cd00;
+      text-align: center;
+    }
+  }
+&__content{
+  hr{
+    border:1px solid $primary-dark;
+    width:80%;
+    margin: 1rem auto;
+    border-radius:100%;
+  }
 .bg{
   background-color: rgba($secondary-light, .3);
 }
@@ -22,6 +45,9 @@
       max-width: 100%;
       text-align: center;
       h2{
+        font-weight:500;
+        letter-spacing: 3px;
+        color:$white-color;
         font-size: clamp(1.5rem, 3vw, 3rem);
         width:95%;
       }
@@ -44,6 +70,7 @@
       border-left: 1px solid $primary-color;
       border-right: 1px solid $primary-color;
       p{
+        color:$primary-dark;
         font-size: clamp(1rem, 2vw, 2rem);
       }
       &:first-child{
@@ -115,4 +142,4 @@
         grid-template-columns: repeat(2,1fr);
       }
     }
-}
+}}

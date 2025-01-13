@@ -1,7 +1,6 @@
 <script setup>
   import { ref, onMounted } from 'vue';
   const videos = ref([]);
-  const twitterFeed = ref(null);
   const fetchLatestVideos = async () => {
   const channelId = 'UC5UrDmPQeRHo1Ts9ielirgQ';
   const apiKey = 'AIzaSyDQrAyINT1LHxfoBrIjSOmPJBSMWKRpkdQ';
@@ -16,21 +15,6 @@
 
 onMounted(() => {
   fetchLatestVideos();
-  // const script = document.createElement('script');
-  // script.src = 'https://platform.twitter.com/widgets.js';
-  // script.async = true;
-  // script.onload = () => {
-  //   // Initialize the Twitter widget
-  //   if (twitterFeed.value) {
-  //     window.twttr.widgets.load(twitterFeed.value);
-  //   }
-  // };
-  // document.body.appendChild(script);
-
-  // // Add the Twitter embed code
-  // twitterFeed.value.innerHTML = `
-  //   <a class="twitter-timeline" data-chrome="noscrollbar noheader" data-theme="dark" data-height="400px" data-width="80vw"href="https://twitter.com/Venek__?ref_src=twsrc%5Etfw">Tweets by AlmostPro_LoL</a>
-  // `;
 });
   const pageTitle = 'Strona główna';
   useHead({
@@ -42,15 +26,6 @@ onMounted(() => {
   <div class="app home">
     <Navbar />
     <Header />
-    <Section anchor="About" title="O nas" subtitle="" grid="2">
-      <div class="about__content">
-        <h3>{{ about.title }}</h3>
-        <p>{{ about.description }}</p>
-      </div>
-      <div class="about__image">
-        <NuxtImg src="/images/about/about_image.webp" alt="Section Image" height="800" width="800" loading="lazy" />
-      </div>
-    </Section>
     <Section anchor="videos" title="Najnowsze filmy" grid="3">
       <div class="videos__content" v-for="video in videos" :key="video.id">
           <a :href="`https://www.youtube.com/watch?v=${video.id}`" target="_blank" class="videos__content--video">
@@ -59,8 +34,22 @@ onMounted(() => {
           </a>
       </div>
     </Section>
-    <!-- <iframe loading="lazy" width="100%" height="1000px" src="https://syndication.twitter.com/srv/timeline-profile/screen-name/Venek__?frame=false&hideBorder=false&hideFooter=false&hideHeader=false&hideScrollBar=false&origin=localhost&showHeader=true&showReplies=false&transparent=false&theme=light&width=550px" style="height: 100%;" frameborder="0" scrolling="no"></iframe> -->
-    <!-- <div ref="twitterFeed"></div> -->
+    <Section anchor="discord" class="discord">
+      <div class="discord__content">
+        <div class="discord__content--text">
+          <h1>Dołącz do naszej społeczności na Discordzie!</h1>
+          <p>
+            Chcesz być częścią naszej społeczności Almost Pro? Dołącz do naszego serwera Discord i bądź na bieżąco z turniejami, ligami i innymi wydarzeniami. Spotkaj innych graczy i fanów e-sportu!
+          </p>
+          <a href="https://discord.gg/3XzZSauqeF" target="_blank" class="discord-button">
+            Dołącz teraz
+          </a>
+        </div>
+        <div class="discord__content--image">
+          <img src="/images/logo/discord.png" alt="Discord Banner">
+        </div>
+      </div>
+    </Section>
     <Footer />
   </div>
 </template>

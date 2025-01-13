@@ -16,7 +16,8 @@ const config = {
 </script>
 <template>
     <Navbar />
-    <Section anchor="wspolpraca" title="Współpraca">
+    <Section anchor="wspolpraca" >
+        <h1>Współpraca</h1>
         <div class="wspolpraca__box">
             <p class="wspolpraca__box--item">
                 Jako organizacja rozwijająca się w kierunku profesjonalnych lig i turniejów online, szukamy partnerów, którzy chcieliby wspierać naszą misję i dołączyć do rozwijania polskiej sceny League of Legends. Zależy nam na współpracy z markami, które są kojarzone z esportem, League of Legends czy sprzętem dla graczy. Poszukujemy sponsorów, którzy pomogą nam w finansowaniu kluczowych aspektów projektu, takich jak pula nagród, promocja wydarzeń, a także wynagrodzenia dla osób zaangażowanych w tworzenie tego przedsięwzięcia.
@@ -29,10 +30,10 @@ const config = {
             </p>
         </div>
     </Section>
-    <Section anchor="stanowiska" title="Poszukujemy ludzi na stanowiska takie jak:">
+    <Section anchor="stanowiska">
         <Carousel v-bind="config">
             <Slide v-for="item in stanowiska" :key="item">
-                <div class="carousel__slide--job">{{ item.job }}</div>
+                <h2 class="carousel__slide--job">{{ item.job }}</h2>
                 <div class="carousel__slide--description">
                   <p>{{ item.description }}</p>
                   <!-- <NuxtImg :alt="`Logo drużyny ${item.team}`" :src="`/images/teams/BW.png`"/> -->

@@ -1,56 +1,94 @@
-.footer {
-  border-top:1px solid $primary-color;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 1rem 1.25rem;
-  margin-top:1rem;
-  backdrop-filter: blur(3px);
-  overflow: hidden;
-  &__body {
-    text-align: center;
-    font-weight: 500;
-    font-size: 1.15rem;
-    line-height: 1;
-    & a {
-      font-weight: 600;
-      color: $primary-color;
-      &:hover {
-        color: $primary-color;
-      }
-    }
-  }
-  .contact__content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 2rem 1rem;
-    transition: .3s all ease;
-    &--title {
-      font-weight: 600;
-      text-wrap: pretty;
-      text-align: center;
-      margin-bottom: 2rem;
-      color: $primary-dark;
-    }
-    &--buttons {
-      justify-content: center;
+.footer{
+    letter-spacing: 1px;
+    background-color: #272734; /* Tło pozostaje takie samo */
+    color: #fff;
+    padding: 40px 20px; /* Większe paddingi dla bardziej przestronnej stopki */
+    font-size: 16px;
+    line-height: 1.6;
+    border-top: #f2cd00 2px solid;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    margin-top: 80px;
+    &__container{
       display: flex;
-      flex-direction: row;
-      gap: 5vw;
-      span{
-        color:$primary-dark;
-        transition: all .3s ease-in-out;
-        scale:1.5;
-        &:hover{
-          color:$primary-color;
-          transform: scale(1.5);
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      max-width: 1200px;
+      margin: 0 auto;
+      &--logo{
+        flex: 1;
+        text-align: center;
+        margin-bottom: 20px;
+        img{
+          max-width: 150px;
+          margin-bottom: 10px;
+        }
+        p{
+          font-size: 18px;
+          color: $primary-color;
+          font-weight: 600;
         }
       }
-      @media screen and (min-width: 992px) {
-        width: 40%;
-        flex-direction: row;
+      &--links{
+        flex: 2;
+        text-align: center;
+        margin-bottom: 20px;
+        h4{
+          font-size: 18px;
+          margin-bottom: 15px;
+          color: $primary-color;
+          font-weight: 600;
+        }
+        ul {
+          list-style: none;
+          padding: 0;
+          margin: 0;
+          li{
+            margin: 10px 0;
+            a{
+              text-decoration: none;
+              color: #bbb;
+              font-size: 16px;
+              transition: color 0.3s ease, transform 0.3s ease;
+              &:hover{
+                color: $primary-color;
+                transform: scale(1.1);
+              }
+            }
+          }
+        }
+      }
+      &--contact{
+        flex: 1;
+        text-align: center;
+        margin-bottom: 20px;
+        h4 {
+          font-size: 18px;
+          margin-bottom: 15px;
+          color: $primary-color;
+          font-weight: 600;
+        }
+        p{
+          margin:10px 0;
+        }
+        a{
+          color: $primary-color;
+          text-decoration:none;
+          &:hover{
+            color:$white-color;
+          }
+        }
       }
     }
-  }
+    &__body{
+      text-align:center;
+      margin-top:20px;
+      color:#aaa;
+      font-size: 1rem;
+      p{
+        margin:0;
+      }
+    }
 }
