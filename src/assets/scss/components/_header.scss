@@ -5,6 +5,9 @@
   background-repeat: no-repeat;
   background-position: center center;
   overflow: hidden;
+  @media screen and (max-width:1212px){
+    background-position: left 20% bottom 0;
+  }
   &::before {
     content: '';
     position: absolute;
@@ -40,7 +43,7 @@
     justify-content: center;
     text-align: center;
     align-items:center;
-
+    height:400px;
   }
   .header__description {
     text-wrap: pretty;
@@ -65,7 +68,7 @@
       margin-bottom: 1rem;
       color: $primary-color;
     }
-    @media screen and (max-width: 992px) {
+        @media screen and (max-width: 992px) {
       padding: 100px 0;
   }
   }
