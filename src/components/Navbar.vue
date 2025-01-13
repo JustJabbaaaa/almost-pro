@@ -41,7 +41,7 @@
           },
           {
             name: 'Ligi',
-            link: 'liga2',
+            link: 'ligi',
           },
           {
             name: 'Ściana chwały',

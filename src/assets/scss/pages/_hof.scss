@@ -9,7 +9,7 @@
   padding: 30px;
   background-color: #272734;
   border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     h1{
       text-transform: uppercase;
       letter-spacing: 5px;
@@ -83,7 +83,7 @@
       &:hover{
         background-color: rgba($secondary-light, .3);
         h2{
-          transform:scale(1.2);
+          transform:scale(1.05);
         }
       }
       h3{
@@ -133,8 +133,11 @@
     }
     &--tots{
       font-size:2rem;
-      width:fit-content;
       margin:auto;
+      &Players{
+        width:fit-content;
+        margin:auto;
+      }
       &Player{
         display:grid;
         justify-items: center;

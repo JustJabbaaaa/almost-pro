@@ -52,9 +52,11 @@ function toggleAccordion(index) {
                   <div class="hof__content--tots" v-if="season.tots && season.tots.gracze">
                     <hr>
                     <h3>{{ season.tots.title }}</h3>
-                    <div class="hof__content--totsPlayer" v-for="(player, key) in season.tots.gracze">
-                      <NuxtImg class="rola" :alt="`Ikona ${key}`" :src="`/images/linie/${key}.png`"></NuxtImg> 
-                      <p>{{ player }}</p>
+                    <div class="hof__content--totsPlayers">
+                      <div class="hof__content--totsPlayer" v-for="(player, key) in season.tots.gracze">
+                        <NuxtImg class="rola" :alt="`Ikona ${key}`" :src="`/images/linie/${key}.png`"></NuxtImg> 
+                        <p>{{ player }}</p>
+                      </div>
                     </div>
                   </div>
                 </div>

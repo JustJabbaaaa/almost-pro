@@ -16,8 +16,15 @@
   letter-spacing: 1.5px;
   border-bottom: 1px solid $primary-color;
   a{
-    color:$white-color
+    text-decoration: none;
+    font-size: 1rem;
+    color: #fff;
+    position: relative; 
+    padding-bottom: 5px;
+    transition: color 0.3s;
+    
   }
+
   & .container {
     display: flex;
     align-items: center;
@@ -137,17 +144,45 @@
     width: 100%;
     &--right {
       margin-left: auto;
-      & a {
-        padding: .5rem 1rem;
-      }
     }
   }
   &__list {
     display: flex;
     align-items: center;
-    gap: .25rem;
+    gap: 20px;
   }
-  &__item a {
-    padding: .5rem 1rem;
-  }
+  &__item{
+    a{
+      &:hover{
+        color: rgb(242, 205, 0);
+      }
+      &:hover::after{
+        width: 100%;
+      }
+      &::after{
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0%;
+        height: 2px;
+        background-color: #f2cd00;
+        transition: width 0.5s ease-in-out;
+      }
+    }
+    .router-link-active{
+    color:$primary-color;
+    &::after{
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0%;
+      height: 2px;
+      background-color: #f2cd00;
+      transition: width 0.5s ease-in-out;
+      width: 100%;
+    }
+  }}
+  
 }

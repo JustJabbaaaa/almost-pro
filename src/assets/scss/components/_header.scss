@@ -45,9 +45,10 @@
     align-items:center;
     height:400px;
   }
-  .header__description {
+  .header__description {  
     text-wrap: pretty;
     text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.8);
+    margin-bottom:-60px;
     padding: 20px;
     &--subtitle {
       color: $secondary-color;
@@ -91,6 +92,68 @@
     padding:50px;
     background-color: #272734;
     border-radius: 10px;
+    position: relative;
+    z-index: 2;
+    .stream, .article{
+      z-index:10;
+    }
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      border-radius: 10px;
+      padding: 2px;
+      background: linear-gradient(
+          90deg,
+          #f2cd00,
+          #272734,
+          #f2cd00,
+          #272734  
+      );
+      background-size: 300% 300%;
+      z-index: -1;
+      animation: moveBorder 3.5s linear infinite;
+  }
+  &::after {
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    right: 2px;
+    bottom: 2px;
+    border-radius: 8px;
+    background-color: #272734;
+    z-index: 1;
+}
+@keyframes moveBorder {
+  0% {
+      background-position: 0% 50%;
+  }
+  100% {
+      background-position: 100% 50%;
+  }
+}
+/* Animacja przesuwania obwódki */
+@keyframes moveBorder {
+  0% {
+      background-position: 0% 50%;
+  }
+  100% {
+      background-position: 100% 50%;
+  }
+}
+
+@keyframes movingBorder {
+  0% {
+      background-position: 200% 0;
+  }
+  100% {
+      background-position: 0 0;
+  }
+}
     .article{
       margin:auto;
       p{
