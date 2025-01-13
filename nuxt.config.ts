@@ -1,4 +1,9 @@
 export default defineNuxtConfig({
+  runtimeConfig: {
+    public: {
+      secret: process.env.YOUTUBE_KEY,
+    }
+  },
   ssr: true,
   srcDir: 'src/',
 

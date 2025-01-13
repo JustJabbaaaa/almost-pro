@@ -5,7 +5,6 @@ const pageTitle = 'Ściana chwały';
     title: pageTitle,
   });
   const accordionIndex = ref(null);
-
 function toggleAccordion(index) {
   if (accordionIndex.value === index) {
     accordionIndex.value = null;
