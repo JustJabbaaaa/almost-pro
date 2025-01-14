@@ -2,6 +2,9 @@
   padding: 100px 50px;
   max-width: 1200px;
   margin: 80px auto;
+  @media screen and (max-width:840px){
+    padding: 100px 0;
+  }
   .liga{
     margin-bottom:-50px;
     padding: 30px;
@@ -12,6 +15,7 @@
       display:flex;
       justify-content:center;
       button{
+        text-align: center;
         text-transform: uppercase;
         font-weight: bold;
         font-size:1rem;

@@ -1,5 +1,5 @@
 <script setup>
-  const pageUrl = 'Nuxt-Starter';
+  const pageUrl = 'almostpro.pl';
   const pageTitle = 'Almost Pro';
   const pageDescription = 'Społeczność, w której rywalizacja staje się pasją';
   useHead({
@@ -32,7 +32,7 @@
   defineOgImageComponent('NuxtSeo', {
     title: pageUrl + '👋',
     description: pageDescription,
-    theme: '#e13428',
+    theme: '#f2cd00',
     colorMode: 'dark',
   })
 </script>
