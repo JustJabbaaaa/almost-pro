@@ -8,21 +8,15 @@ const pageTitle = 'Ligi';
   const data1 = reactive(liga1.map(item => ({
   ...item,
   flipped: false,
-  imageSrc: `/images/teams/liga1/${item.shortcut}.png`,
 })));
 
 const data2 = reactive(liga2.map(item => ({
   ...item,
   flipped: false,
-  imageSrc: `/images/teams/liga2/${item.shortcut}.png`,
 })));
 
 function toggleCard(item) {
   item.flipped = !item.flipped; // Toggle the flipped state
-}
-
-function handleImageError(item) {
-  item.imageSrc = 'https://placehold.co/400x400?text=Team+Placeholder';
 }
 
 </script>
@@ -41,20 +35,12 @@ function handleImageError(item) {
               <div class="teams">
                 <div v-for="item in data1" :key="item.title" class="teams__card" @click="toggleCard(item)">
                   <div class="teams__card--front" :class="{ 'hidden': item.flipped }">        
-                    <NuxtImg
-                      :alt="`Logo drużyny ${item.team}`"
-                      :src="item.imageSrc"
-                      @error="handleImageError(item)"
-                    />
+                    <NuxtImg :alt="`Logo drużyny ${item.team}`" :src="`/images/teams/liga1/${item.shortcut}.png`"/>
                     <h3>{{ item.team }}</h3>
                   </div>
                   <div class="teams__card--back" :class="{ 'hidden': !item.flipped }">
                     <div class="teams__card--top">
-                      <NuxtImg
-                        :alt="`Logo drużyny ${item.team}`"
-                        :src="item.imageSrc"
-                        @error="handleImageError(item)"
-                      />
+                      <NuxtImg :alt="`Logo drużyny ${item.team}`" :src="`/images/teams/liga1/${item.shortcut}.png`"/>
                       <h3>{{ item.team }}</h3>
                     </div>
                     <div class="teams__card--players">
@@ -82,20 +68,12 @@ function handleImageError(item) {
               <div class="teams">
                 <div v-for="item in data2" :key="item.title" class="teams__card" @click="toggleCard(item)">
                   <div class="teams__card--front" :class="{ 'hidden': item.flipped }">        
-                    <NuxtImg
-                      :alt="`Logo drużyny ${item.team}`"
-                      :src="item.imageSrc"
-                      @error="handleImageError(item)"
-                    />
+                    <NuxtImg :alt="`Logo drużyny ${item.team}`" :src="`/images/teams/liga2/${item.shortcut}.png`"/>
                     <h3>{{ item.team }}</h3>
                   </div>
                   <div class="teams__card--back" :class="{ 'hidden': !item.flipped }">
                     <div class="teams__card--top">
-                      <NuxtImg
-                        :alt="`Logo drużyny ${item.team}`"
-                        :src="item.imageSrc"
-                        @error="handleImageError(item)"
-                      />
+                      <NuxtImg :alt="`Logo drużyny ${item.team}`" :src="`/images/teams/liga2/${item.shortcut}.png`"/>
                       <h3>{{ item.team }}</h3>
                     </div>
                     <div class="teams__card--players">

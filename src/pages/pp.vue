@@ -6,7 +6,6 @@ const pageTitle = 'Polityka Prywatności';
 </script>
 <template>
     <Navbar/>
-    <template>
         <Section anchor="pp">
             <p>Polityka Prywatności strony Almost Pro<br>
 
@@ -62,6 +61,5 @@ const pageTitle = 'Polityka Prywatności';
             <br>
             To wersja Polityki Prywatności dostosowana do sytuacji, w której nie działasz jako firma, ale jako osoba prywatna prowadząca stronę. Upewnij się, że odpowiednio dopasujesz zapisy do swoich rzeczywistych praktyk oraz przepisów prawa, w tym np. RODO, jeśli Twoja strona ma użytkowników z UE.</p>
         </Section>
-    </template>
     <Footer/>
 </template>

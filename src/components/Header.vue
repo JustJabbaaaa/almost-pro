@@ -10,7 +10,7 @@
       <div class="stream">
         <h2> - LIVE</h2>
         <div class="stream--image">
-          <iframe src="https://player.twitch.tv/?channel=AlmostPro_LoL&parent=localhost" allowfullscreen></iframe>
+          <iframe src="https://player.twitch.tv/?channel=AlmostPro_LoL&parent=almostpro.pl" allowfullscreen></iframe>
         </div>
       </div>
       <div class="article">
