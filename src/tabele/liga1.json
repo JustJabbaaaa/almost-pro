@@ -1,161 +1,134 @@
 [
-    {
-      "team": "BEIFENGG ESPORTS",
-      "shortcut": "BE",
-      "wins": 5,
-      "loses": 3,
-      "linie": {
-        "top": "Grundi",
-        "jg": "Lissekxdsa",
-        "mid": "px3ke",
-        "adc": "ek1pa",
-        "sup": "dawid"
-      }
-    },
-    {
-      "team": "BLOODY WOUNDS",
-      "shortcut": "BW",
-      "wins": 5,
-      "loses": 3,
-      "linie": {
-        "top": "Grundi",
-        "jg": "Lissek",
-        "mid": "px3ke",
-        "adc": "ek1pa",
-        "sup": "dawid"
-      }
-    },
-    {
-      "team": "Chaos Banes",
-      "shortcut": "CB",
-      "wins": 5,
-      "loses": 3,
-      "linie": {
-        "top": "Grundi",
-        "jg": "Lissek",
-        "mid": "px3ke",
-        "adc": "ek1pa",
-        "sup": "dawid"
-      }
-    },
-    {
-      "team": "Chaos Banes",
-      "shortcut": "CB",
-      "wins": 5,
-      "loses": 3,
-      "linie": {
-        "top": "Grundi",
-        "jg": "Lissek",
-        "mid": "px3ke",
-        "adc": "ek1pa",
-        "sup": "dawid"
-      }
-    },
-    {
-      "team": "Chaos Banes",
-      "shortcut": "CB",
-      "wins": 5,
-      "loses": 3,
-      "linie": {
-        "top": "Grundi",
-        "jg": "Lissek",
-        "mid": "px3ke",
-        "adc": "ek1pa",
-        "sup": "dawid"
-      }
-    },
-    {
-      "team": "Chaos Banes",
-      "shortcut": "CB",
-      "wins": 5,
-      "loses": 3,
-      "linie": {
-        "top": "Grundi",
-        "jg": "Lissek",
-        "mid": "px3ke",
-        "adc": "ek1pa",
-        "sup": "dawid"
-      }
-    },
-    {
-      "team": "Chaos Harbringers",
-      "shortcut": "CE",
-      "wins": 5,
-      "loses": 3,
-      "linie": {
-        "top": "Grundi",
-        "jg": "Lissek",
-        "mid": "px3ke",
-        "adc": "ek1pa",
-        "sup": "dawid"
-      }
-    },
-    {
-      "team": "Gejmingowi Emeryci",
-      "shortcut": "GEJ",
-      "wins": 5,
-      "loses": 3,
-      "linie": {
-        "top": "Grundi",
-        "jg": "Lissek",
-        "mid": "px3ke",
-        "adc": "ek1pa",
-        "sup": "dawid"
-      }
-    },
-    {
-      "team": "No.7",
-      "shortcut": "N7",
-      "wins": 5,
-      "loses": 3,
-      "linie": {
-        "top": "Grundi",
-        "jg": "Lissek",
-        "mid": "px3ke",
-        "adc": "ek1pa",
-        "sup": "dawid"
-      }
-    },
-    {
-      "team": "Chaos Oni",
-      "shortcut": "ONI",
-      "wins": 6,
-      "loses": 3,
-      "linie": {
-        "top": "Grundi",
-        "jg": "Lissek",
-        "mid": "px3ke",
-        "adc": "ek1pa",
-        "sup": "dawid"
-      }
-    },
-    {
-      "team": "Reve Esports",
-      "shortcut": "REV",
-      "wins": 8,
-      "loses": 3,
-      "linie": {
-        "top": "Grundi",
-        "jg": "Lissek",
-        "mid": "px3ke",
-        "adc": "ek1pa",
-        "sup": "dawid"
-      }
-    },
-    {
-      "team": "Tuesday Slots",
-      "captain": "px3ke",
-      "captainDC": "px3ke#1234",
-      "shortcut": "TS",
-      "wins": 13,
-      "loses": 21,
-      "linie": {
-        "top": "Grundi",
-        "jg": "Lissek",
-        "mid": "px3ke",
-        "adc": "ek1pa",
-        "sup": "dawid"
-      },
-      "opgg": "https://www.op.gg/summoners/euw/Adison-2137"
+  {
+    "team": "NOT MY BAD",
+    "shortcut": "NMB",
+    "linie": {
+      "top": "Nooyk",
+      "jg": "Zauee",
+      "mid": "Luidzi",
+      "adc": "Drzemik",
+      "sup": "Sokół"
     }
-  ]
+  },
+  {
+    "team": "NO7",
+    "shortcut": "NO7",
+    "linie": {
+      "top": "Dawidek",
+      "jg": "oiopipoi",
+      "mid": "Olek",
+      "adc": "Słoniu",
+      "sup": "dddoman"
+    }
+  },
+  {
+    "team": "Sparta Katowice",
+    "shortcut": "BKS",
+    "linie": {
+      "top": "ChamZRadomia",
+      "jg": "Moxxie",
+      "mid": "Żurek",
+      "adc": "Balk",
+      "sup": "Kumoreq"
+    }
+  },
+  {
+    "team": "Shadow Sindicate Kings",
+    "shortcut": "SSK",
+    "linie": {
+      "top": "MadMan",
+      "jg": "Borubar",
+      "mid": "Zoiner",
+      "adc": "Vademori",
+      "sup": "Daumian"
+    }
+  },
+  {
+    "team": "AZP",
+    "shortcut": "AZP",
+    "linie": {
+      "top": "Kapjur",
+      "jg": "Whoolfie",
+      "mid": "Kscepersky",
+      "adc": "Bungal",
+      "sup": "Doppsiak"
+    }
+  },
+  {
+    "team": "Kociaki Toxina",
+    "shortcut": "KT",
+    "linie": {
+      "top": "Bakuś",
+      "jg": "Toxin",
+      "mid": "Rookie",
+      "adc": "Eiczi",
+      "sup": "Beastille"
+    }
+  },
+  {
+    "team": "Deadly Sins",
+    "shortcut": "DS",
+    "linie": {
+      "top": "Destro",
+      "jg": "Hope",
+      "mid": "Aroks",
+      "adc": "Vonski",
+      "sup": "Tommorov"
+    }
+  },
+  {
+    "team": "COCKPITOLOL",
+    "shortcut": "WWW",
+    "linie": {
+      "top": "Coobroo",
+      "jg": "Lumino",
+      "mid": "DustFate",
+      "adc": "Huubiii",
+      "sup": "Disuu"
+    }
+  },
+  {
+    "team": "DNA VORTEX",
+    "shortcut": "DNAV",
+    "linie": {
+      "top": "Dimulec",
+      "jg": "Liss3eek",
+      "mid": "Ukulson",
+      "adc": "Judi",
+      "sup": "Donson"
+    }
+  },
+  {
+    "team": "Beifeng7",
+    "shortcut": "B7",
+    "linie": {
+      "top": "Krieg",
+      "jg": "Reksio",
+      "mid": "Urban",
+      "adc": "Zgonek",
+      "sup": "xcousocous"
+    }
+  },
+  {
+    "team": "Joy Enjoying Gentlemen",
+    "shortcut": "JEG",
+    "linie": {
+      "top": "Monnr",
+      "jg": "Mimek",
+      "mid": "Dadds",
+      "adc": "Apathy",
+      "sup": "Fluky"
+    }
+  },
+  {
+    "team": "Złote Adasie",
+    "shortcut": "ZA",
+    "linie": {
+      "top": "Effigy",
+      "jg": "Hunter",
+      "mid": "Sorrow",
+      "adc": "Grzosu",
+      "sup": "Qwilex"
+    }
+  }
+]

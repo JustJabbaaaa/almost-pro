@@ -1,122 +1,134 @@
 [
-    {
-      "team": "BEIFENG ESPORTS",
-      "shortcut": "BE",
-      "wins": 5,
-      "loses": 3,
-      "linie": {
-        "top": "Grundi",
-        "jg": "Lissekxdsa",
-        "mid": "px3ke",
-        "adc": "ek1pa",
-        "sup": "dawid"
-      }
-    },
-    {
-      "team": "BLOODY WOUNDS",
-      "shortcut": "BW",
-      "wins": 5,
-      "loses": 3,
-      "linie": {
-        "top": "Grundi",
-        "jg": "Lissek",
-        "mid": "px3ke",
-        "adc": "ek1pa",
-        "sup": "dawid"
-      }
-    },
-    {
-      "team": "Chaos Banes",
-      "shortcut": "CB",
-      "wins": 5,
-      "loses": 3,
-      "linie": {
-        "top": "Grundi",
-        "jg": "Lissek",
-        "mid": "px3ke",
-        "adc": "ek1pa",
-        "sup": "dawid"
-      }
-    },
-    {
-      "team": "Chaos Harbringers",
-      "shortcut": "CE",
-      "wins": 5,
-      "loses": 3,
-      "linie": {
-        "top": "Grundi",
-        "jg": "Lissek",
-        "mid": "px3ke",
-        "adc": "ek1pa",
-        "sup": "dawid"
-      }
-    },
-    {
-      "team": "Gejmingowi Emeryci",
-      "shortcut": "GEJ",
-      "wins": 5,
-      "loses": 3,
-      "linie": {
-        "top": "Grundi",
-        "jg": "Lissek",
-        "mid": "px3ke",
-        "adc": "ek1pa",
-        "sup": "dawid"
-      }
-    },
-    {
-      "team": "No.7",
-      "shortcut": "N7",
-      "wins": 5,
-      "loses": 3,
-      "linie": {
-        "top": "Grundi",
-        "jg": "Lissek",
-        "mid": "px3ke",
-        "adc": "ek1pa",
-        "sup": "dawid"
-      }
-    },
-    {
-      "team": "Chaos Oni",
-      "shortcut": "ONI",
-      "wins": 6,
-      "loses": 3,
-      "linie": {
-        "top": "Grundi",
-        "jg": "Lissek",
-        "mid": "px3ke",
-        "adc": "ek1pa",
-        "sup": "dawid"
-      }
-    },
-    {
-      "team": "Reve Esports",
-      "shortcut": "REV",
-      "wins": 8,
-      "loses": 3,
-      "linie": {
-        "top": "Grundi",
-        "jg": "Lissek",
-        "mid": "px3ke",
-        "adc": "ek1pa",
-        "sup": "dawid"
-      }
-    },
-    {
-      "team": "Tuesday Slots",
-      "captain": "px3ke",
-      "captainDC": "px3ke#1234",
-      "shortcut": "TS",
-      "wins": 13,
-      "loses": 21,
-      "linie": {
-        "top": "Grundi",
-        "jg": "Lissek",
-        "mid": "px3ke",
-        "adc": "ek1pa",
-        "sup": "dawid"
-      },
-      "opgg": "https://www.op.gg/summoners/euw/Adison-2137"
+  {
+    "team": "Tuesday Slots",
+    "shortcut": "TES",
+    "linie": {
+      "top": "Grundi",
+      "jg": "AlexMercer",
+      "mid": "andrzej",
+      "adc": "Ek1pa",
+      "sup": "dddawid"
     }
-  ]
+  },
+  {
+    "team": "Nie opłaca nam się",
+    "shortcut": "NOMS",
+    "linie": {
+      "top": "Azkis",
+      "jg": "El sadico",
+      "mid": "Bagieuttea",
+      "adc": "DobekXD",
+      "sup": "Shiromii"
+    }
+  },
+  {
+    "team": "KASTiusze",
+    "shortcut": "KAST",
+    "linie": {
+      "top": "Sado",
+      "jg": "Daras",
+      "mid": "Vexon",
+      "adc": "Gunershoter",
+      "sup": "361"
+    }
+  },
+  {
+    "team": "Shadow Sindicate Aces",
+    "shortcut": "SSA",
+    "linie": {
+      "top": "CzescZelku",
+      "jg": "Himek",
+      "mid": "Explosive",
+      "adc": "Kuzi",
+      "sup": "klopsik"
+    }
+  },
+  {
+    "team": "Team Meteora",
+    "shortcut": "TM",
+    "linie": {
+      "top": "kotkikotki",
+      "jg": "m1x3r_28",
+      "mid": "vexareq",
+      "adc": "_6118",
+      "sup": "kacperrod"
+    }
+  },
+  {
+    "team": "Fanatycy Wędkarstwa",
+    "shortcut": "FW",
+    "linie": {
+      "top": "kno4x",
+      "jg": "303",
+      "mid": "uchicha_god",
+      "adc": "Kuba",
+      "sup": "Kishy"
+    }
+  },
+  {
+    "team": "Sudden Impact",
+    "shortcut": "SI",
+    "linie": {
+      "top": "Xeryuus",
+      "jg": "Fiszu",
+      "mid": "Kondi",
+      "adc": "Vitto",
+      "sup": "Zeffik"
+    }
+  },
+  {
+    "team": "Zespół Brauma",
+    "shortcut": "ZB",
+    "linie": {
+      "top": "Robciu",
+      "jg": "Sayyajinn",
+      "mid": "Duczi",
+      "adc": "Rega",
+      "sup": "Foylep"
+    }
+  },
+  {
+    "team": "Skibidi Sigmy",
+    "shortcut": "SS",
+    "linie": {
+      "top": "Warda",
+      "jg": "siankopl200",
+      "mid": "bowexe_",
+      "adc": "skutybonaparte",
+      "sup": "krzysiu"
+    }
+  },
+  {
+    "team": "Kartofle PP",
+    "shortcut": "KPP",
+    "linie": {
+      "top": "JaskierV2",
+      "jg": "Adwokat",
+      "mid": "Kosmoślizg",
+      "adc": "Dzopson",
+      "sup": "Kuzia"
+    }
+  },
+  {
+    "team": "Zagłębie Paraliż",
+    "shortcut": "ZP",
+    "linie": {
+      "top": "Severum",
+      "jg": "Aqua",
+      "mid": "SkyPax",
+      "adc": "Dia",
+      "sup": "Giemx"
+    }
+  },
+  {
+    "team": "LOCKON7",
+    "shortcut": "L7",
+    "linie": {
+      "top": "Lelek",
+      "jg": "komonardon",
+      "mid": "Mike",
+      "adc": "Yayami",
+      "sup": "Ambens"
+    }
+  }
+]

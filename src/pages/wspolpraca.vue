@@ -36,7 +36,6 @@ const config = {
                 <h2 class="carousel__slide--job">{{ item.job }}</h2>
                 <div class="carousel__slide--description">
                   <p>{{ item.description }}</p>
-                  <!-- <NuxtImg :alt="`Logo drużyny ${item.team}`" :src="`/images/teams/BW.png`"/> -->
                 </div>
             </Slide>
             <template #addons>

@@ -7,7 +7,7 @@
         "linie": {
           "top": "Severum",
           "jg": "bladeofdarkness",
-          "mid": "niewiem",
+          "mid": "azuri",
           "adc": "vademori",
           "sup": "TheWap"
         }
@@ -73,6 +73,7 @@
       "nazwa": "3 SEZON OKRĘGÓWKI",
       "winner": {
         "team_name": "ONION TEAM",
+        "sc": "OT",
         "linie": {
           "coach": "mikomiko",
           "top": "Piort",
@@ -105,6 +106,7 @@
       "nazwa": "1 SEZON ALMOST PRO OKRĘGÓWKI",
       "winner": {
         "team_name": "ONION TEAM",
+        "sc": "OT",
         "linie": {
           "coach": "mikomiko",
           "top": "Piort",
@@ -125,7 +127,7 @@
       "nazwa": "2 SEZON ALMOST PRO",
       "winner": {
         "team_name": "NO.7 ESPORTS",
-        "sc": "N7",
+        "sc": "NO7",
         "linie": {
           "top": "Dawidek",
           "jg": "Chudy Bingus",

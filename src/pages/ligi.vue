@@ -1,21 +1,28 @@
 <script setup>
 import liga1 from '/tabele/liga1.json';
 import liga2 from '/tabele/liga2.json';
-const pageTitle = 'Druga Liga';
+const pageTitle = 'Ligi';
   useHead({
     title: pageTitle,
   });
   const data1 = reactive(liga1.map(item => ({
   ...item,
-  flipped: false, // Ensure each item has a flipped property
+  flipped: false,
+  imageSrc: `/images/teams/liga1/${item.shortcut}.png`,
 })));
-  const data2 = reactive(liga2.map(item => ({
+
+const data2 = reactive(liga2.map(item => ({
   ...item,
-  flipped: false, // Ensure each item has a flipped property
+  flipped: false,
+  imageSrc: `/images/teams/liga2/${item.shortcut}.png`,
 })));
 
 function toggleCard(item) {
   item.flipped = !item.flipped; // Toggle the flipped state
+}
+
+function handleImageError(item) {
+  item.imageSrc = 'https://placehold.co/400x400?text=Team+Placeholder';
 }
 
 </script>
@@ -34,12 +41,20 @@ function toggleCard(item) {
               <div class="teams">
                 <div v-for="item in data1" :key="item.title" class="teams__card" @click="toggleCard(item)">
                   <div class="teams__card--front" :class="{ 'hidden': item.flipped }">        
-                    <NuxtImg :alt="`Logo drużyny ${item.team}`" :src="`/images/teams/${item.shortcut}.png`"/>
+                    <NuxtImg
+                      :alt="`Logo drużyny ${item.team}`"
+                      :src="item.imageSrc"
+                      @error="handleImageError(item)"
+                    />
                     <h3>{{ item.team }}</h3>
                   </div>
                   <div class="teams__card--back" :class="{ 'hidden': !item.flipped }">
                     <div class="teams__card--top">
-                      <NuxtImg :alt="`Logo drużyny ${item.team}`" :src="`/images/teams/${item.shortcut}.png`"/>
+                      <NuxtImg
+                        :alt="`Logo drużyny ${item.team}`"
+                        :src="item.imageSrc"
+                        @error="handleImageError(item)"
+                      />
                       <h3>{{ item.team }}</h3>
                     </div>
                     <div class="teams__card--players">
@@ -67,12 +82,20 @@ function toggleCard(item) {
               <div class="teams">
                 <div v-for="item in data2" :key="item.title" class="teams__card" @click="toggleCard(item)">
                   <div class="teams__card--front" :class="{ 'hidden': item.flipped }">        
-                    <NuxtImg :alt="`Logo drużyny ${item.team}`" :src="`/images/teams/${item.shortcut}.png`"/>
+                    <NuxtImg
+                      :alt="`Logo drużyny ${item.team}`"
+                      :src="item.imageSrc"
+                      @error="handleImageError(item)"
+                    />
                     <h3>{{ item.team }}</h3>
                   </div>
                   <div class="teams__card--back" :class="{ 'hidden': !item.flipped }">
                     <div class="teams__card--top">
-                      <NuxtImg :alt="`Logo drużyny ${item.team}`" :src="`/images/teams/${item.shortcut}.png`"/>
+                      <NuxtImg
+                        :alt="`Logo drużyny ${item.team}`"
+                        :src="item.imageSrc"
+                        @error="handleImageError(item)"
+                      />
                       <h3>{{ item.team }}</h3>
                     </div>
                     <div class="teams__card--players">
@@ -103,14 +126,14 @@ export default {
     name: 'Home',
     data() {
       return {
-        data: liga2,
+        data: liga2,liga1,
         activeSection: 'Pierwsza'
     }
   },
   methods: {
     toggleSection(section) {
       this.activeSection = section;
-    }
+    },
   }
 }
 </script>

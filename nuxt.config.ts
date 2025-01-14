@@ -8,7 +8,7 @@ export default defineNuxtConfig({
   srcDir: 'src/',
 
   app: {
-    baseURL: '/nuxt-starter/'
+    baseURL: '/'
   },
 
   css: [
